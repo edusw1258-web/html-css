@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos em HTML5</title>
+    <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
+    <style>
+
+        body {
+            background-color: rgb(135, 48, 248);
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+            min-height: 100vh; /* Ocupa a tela inteira */
+            display: flex; /* Essa ajuda a controlar o posicionameto dos elementos, por padrão, horizontalmente e a esquerda */
+            flex-direction: column; /* Organiza os elementos verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            margin: 0; /* Remove margens padrão posta pelo navegador */
+        }
+
+        div { /* Ajustes da div que contém os videos */
+            display: flex; /* Ajusta os vídeos lado a lado */ 
+            flex-direction: column; /* Organiza os vídeos em verticalmente */
+            align-items: center; /* Centraliza os vídeos horizontalmente */
+            gap: 20px; /* Espaçamento entre os vídeos */
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: auto;
+            font-size: 14px;
+            color: rgb(61, 54, 54);
+            opacity: 0.8;
+        }
+        
+        footer p {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no próprio servidor da máquina, ou seja, está hospedado localmente.</p>
+<div class="form">
+    <video poster="imagens/vlcsnap-2026-01-21-21h20m10s805.png" width="550" height="315" controls autoplay loop>
+        <source src="midia/meuvideo.mp4" type="video/mp4">
+        <source src="midia/meuvideo.mkv" type="video/mp4">
+        <source src="midia/meuvideo.webm.webm" type="video/webm">
+        <p>Seu navegador não tem compatibilidade com vídeos HTML5.  </p>
+    </video>
+    <h1>Inserindo vídeos do YouTube (Servidores externos)</h1>
+    <iframe width="550" height="315" src="https://www.youtube.com/embed/X-lXfmWToIY?si=Aatn_owR_CpSJVFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+</div>
+    
+</body>
+<footer>
+    <p>&copy; Gabriel Eduardo</p>
+</footer>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: rgba(55, 6, 100, 0.979);
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: bisque;
+        }
+
+        h1 {
+            font-family:'Courier New', Courier, monospace;
+            color: rgb(175, 175, 240);
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        li {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        dd {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(151, 146, 228);
+        }
+
+        dt {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: aqua;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-style: italic;
+            color: azure;
+            opacity: 0.6;
+            font-size: 10px;
+        }
+
+        ol.caderno {
+            background-color: #f8d857;
+            color: black;
+            padding: 15px 30px;
+            border-left: 6px solid rgb(177, 102, 4); /* Cria uma borda na esquerda */
+            font-family: 'Courier New', Courier, monospace;
+            width: fit-content; /* Define o tamanho do caderno de acordo com o conteúdo */
+
+            background-image: repeating-linear-gradient( /* Cria um desenho de caderno, adicionando linhas */
+                to bottom, /* O desenho das linhas vai de baixo para cima */
+                transparent, /* Espaço entre as linhas do caderno*/
+                transparent 22px, /* Altura do espaço entre as linhas */
+                #9fbdee 23px
+            );
+        }
+
+        ol.caderno li { /* Estiliza as linhas do caderno para cada item, adicionando um espaço entre as linhas*/
+            line-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com listas</h1>
+    <h2>&#x1F4CB Listas ordenadas</h2>
+    <!--
+    type 1: 1, 2, 3, 4... (padrão)
+    type A: A, B, C, D...
+    type a: a, b, c, d...
+    type I: I, II, III, IV...
+    type i: i, ii, iii, iv...
+    -->
+    <ol class="caderno "type="1">
+        <li>Acordar</li>
+        <li>Agradecer a Deus</li>
+        <li>Escovar os dentes</li>
+        <li>Tomar café</li>
+        <li>Ir para o trabalho</li>
+        <li>Almoçar</li>
+    </ol>
+
+    <h2>Listas não ordenadas</h2>
+    <ul>
+        <li>Leite</li>
+        <li>Pão</li>
+        <li>Queijo</li>
+        <li>Tomate</li>
+        <li>Cebola</li>
+    </ul>
+
+    <h2>Meus jogos favoritos</h2>
+    <ol type="I">
+        <li>Xbox e PS5</li>
+        <ol>
+            <li>God of War</li>
+            <ol type="a">
+                <li>God of War I</li>
+                <li>God of War II</li>
+                <li>God of War III</li>
+            </ol>
+            <li>The Elder Scrolls</li>
+            <ol>
+                <li>Skyrim</li>
+                <li>Oblivion</li>
+                <li>Morrowind</li>
+            </ol>
+            <li>Fifa</li>
+            <li>Subnautica</li>
+            <li>The Witcher</li>
+        </ol>
+        <li>Nintendo</li>
+        <ul type="square">
+            <li>The Legend of Zelda</li>
+            <li>Super Mario</li>
+            <li>Metroid</li>
+            <li>Animal Crossing</li>
+            <li>Pokémon</li>
+        </ul>
+    </ol>
+    <h2>Lista de definição</h2>
+    <dl>
+        <dt><abbr title="Hypertext Markup Language">HTML</abbr></dt>
+        <dd>Linguagem de marcação para criação de páginas web.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação de estilo para páginas web.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para criar interatividade em páginas web.</dd>
+    </dl>
+</body>
+<footer>
+    <p>&copy;Gabriel Eduardo</p>
+</footer>
+</html>

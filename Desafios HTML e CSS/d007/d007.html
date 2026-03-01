@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 007</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Estas imagens mudam de tamanho conforme o tamanho da tela.</p>
+    <picture>
+        <source media="(max-width: 600px)" srcset="./imagens/paisagem-p.png">
+        <source media="(max-width: 1200px)" srcset="./imagens/paisagem-m.png">
+        <img src="./imagens/paisagem-g.png" alt="Imagem dinâmica">
+    </picture>
+</body>
+</html>

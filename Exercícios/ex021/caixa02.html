@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupings Tags</title>
+    <style>
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            margin: 0px;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 0px;
+        }
+
+        nav {
+            background-color: lightslategray;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+            box-shadow: 5px 3px 3px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            background-color: lightgray;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px 0px; /* Arredonda as bordas */
+            box-shadow: 5px 3px 3px 1px rgba(0, 0, 0, 0.3);
+        }
+
+
+        article {
+            background-color: lightyellow;
+        }
+
+        article > aside {
+            background-color: rgba(0, 0, 0, 0.13);
+         
+        }
+
+        footer {
+            background-color: lightgray;
+            text-align: center;
+            padding: 4px;
+            margin: 0px; /* Precisamos adicionar um 'margin' de 0 porque o navegador entende isso como uma parágrafo e aduciona uma margem de automática de 16px, o que não é o que queremos. */
+        }
+
+        footer > p {
+            margin: 0px; /* Precisamos adicionar um 'padding' de 0 para que o preechimento fique alinhado ao topo*/
+        }
+
+        div#bola {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: rgba(0, 0, 0, 0.747);
+            border-radius: 60px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+        <h1>Meu Site</h1>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+    </nav>
+    </header>
+    <main>
+        <section id="assunto">
+            <h2>Assuntos em destaque</h2>
+            <p>Conteúdo fictício e genérico de exemplo pertencenete ao assunto em destaque</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícias sobre B</h2>
+                <p>Conteúdo fictício e genérico de exemplo pertencenete ao assunto de notícias B</p>
+                <aside>
+                    <p>Artigo descrito por Joãozinho da Golmeia</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Gabriel Eduardo</p>
+    </footer>
+    <div id="bola">
+        
+    </div>
+</body>
+</html>

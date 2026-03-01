@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+    <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
+    <style>
+        body {
+            background-color: rgb(200, 200, 200);
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(50, 100, 150);
+        }
+
+        h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: blueviolet;
+        }
+
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        code {
+            color: darkred;
+            background-color: rgb(200, 200, 200);
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        q {
+            font-style: italic;
+            color: rgb(65, 77, 65);
+
+        }
+
+        blockquote {
+            font-style: italic;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(78, 85, 78);
+            border-left: 4px solid darkgreen; /* Adiciona uma borda esquerda */
+            margin-left: 20px; /* Adiciona uma margem esquerda */
+            padding-left: 10px; /* Adiciona um espaçamento interno à esquerda */
+        }
+
+        p {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: auto;
+            font-size: 14px;
+            color: gray;
+        }
+
+        footer p {
+            font-style: italic;
+            opacity: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Código-fonte</h2>
+    <p>O comando <code>document.getElementeById("teste")</code> é escrito em JavaScript</p>
+    <pre>
+        <!-- a tag 'code' serve para destacar um trecho de códigos -->
+        <code>
+            num = input("Digite um número: ")
+            if num % 2 == 0:
+                print("O número é par")
+            else:
+                print("O número é ímpar")
+        </code>
+    </pre>
+    <h2>Citações simples</h2>
+    <p>Como diria o pai de uma amigo: o computador é um burro muito rápido</p>
+    <h2>Citações longas</h2>
+    <!-- a tag 'q' serve para destacar uma citação simples, ocupando somente o treho da linha (inline-level) -->
+    <p>Segundo o professor, em seu livro, <q>o computador é um burro muito rápido</q></p>
+    <!-- a tag 'blockquote' serve para destacar uma citação longa, ocupando uma caixa (box-level) -->
+    <blockquote cite="https://oguaira.com.br/opiniao/nao-ha-nada-mais-burro-que-um-computador/">
+        O computador é um burro muito rápido. Ele não pensa, apenas processa informações conforme as instruções que recebe. Por isso, é fundamental que os programadores escrevam códigos claros e eficientes para que o computador possa executar as tarefas corretamente.
+    </blockquote>
+    <h2>Abreviações</h2>
+    <!-- a tag 'abbr' serve para destacar uma abreviação, trasformando o trecho em um 'link' com explicação ao passar o mouse -->
+    <p>Estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr> e estou adorando</p>
+</body>
+<footer>
+    <p>&copy;Gabriel Eduardo</p>
+</footer>
+</html>
