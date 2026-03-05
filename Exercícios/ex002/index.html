@@ -6,50 +6,62 @@
     <title>Parágrafos</title>
     <link rel="shortcut icon" href="icon/favicon-32x32.png" type="image/x-icon">
     <style>
+
         body {
             font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
             font-size: 20px;
-            font-weight: lighter;
+            font-weight: lighter; /* Peso da fonte. Deixa mais ou menos grossa/escura */
             background-color: rgb(89, 179, 179);
             min-height: 100vh; /* Garante que o corpo ocupe toda a altura da viewport */
             flex-direction: column; /* Alinha os elementos verticalmente */
             display: flex; /* Essa parte se adapta ao tamanho da tela, que aqui é de no minimo 100vh */
         }
+
         footer {
             margin-top: auto; /* Empurra o rodapé para o final da página, ficará após a distância de 100vh definda em min-height */
+        }
+
+        footer p {
+            background-color: gray;
+            font-style: italic;
             text-align: center;
             color: rgb(83, 88, 88);
             font-size: 14px;
         }
-        footer p {
-            font-style: italic;
+
+        hr {
+            border-color: black;
         }
+
     </style>
 </head>
 <body>
-    <h1>Parágrafos e quebras de linhas</h1>
-    <hr>
-    <p>Um parágrafo pode ser escrito de qualquer forma desde que tudo esteja entre as tags 'p' e '/p'</p>
-    <p>Se necessário quebrar um texto em algum lugar específico, usamos a tag 'br'.<br>
-    Para usarmos os símbolos de abertura de tag sem necessariamente abrir uma tag usamos &lt e &gt seguidos de ponto e vírgula. <br>Veja: <mark>& l t ;</mark> tudo aqui dentro está entre os símbolos de abertura e fechadura de tags, mas no formato escrito. <mark>& g t ;</mark></p>
-    <p>Vamos adicionar alguns símbolos especiais:
-        &copy;
-        &trade;
-        &reg;
-        &euro;
-        &dollar;
-        &pound;
-        &yen;
-        &Delta;
-        &Omega;
-    </p>
-    <p>Vamos adicionar alguns emojis:
-        &#x1F596;
-        &#x1F44D;
-        &#x1F44E;
-    </p>
+    <main>
+        <h1>Parágrafos e quebras de linhas</h1>
+        <hr>
+        <p>Um parágrafo pode ser escrito de qualquer forma desde que tudo esteja entre as tags 'p' e '/p'</p>
+        <p>Se necessário quebrar um texto em algum lugar específico, usamos a tag 'br'.<br>
+        Para usarmos os símbolos de abertura de tag sem necessariamente abrir uma tag usamos &lt e &gt seguidos de ponto e vírgula. <br>Veja: <mark>& l t ;</mark> tudo aqui dentro está entre os símbolos de abertura e fechadura de tags, mas no formato escrito. <mark>& g t ;</mark></p>
+        <p>Vamos adicionar alguns símbolos especiais:
+            &copy;
+            &trade;
+            &reg;
+            &euro;
+            &dollar;
+            &pound;
+            &yen;
+            &Delta;
+            &Omega;
+        </p>
+        <p>Vamos adicionar alguns emojis:
+            &#x1F596;
+            &#x1F44D;
+            &#x1F44E;
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy; Gabriel Eduardo</p>
-</footer>
 </html>
