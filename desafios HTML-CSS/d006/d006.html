@@ -5,18 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 006</title>
     <link rel="icon" href="favicon.ico">
+    <style>
+
+        header {
+            margin: 0px;
+            text-align: center;
+        }
+
+        header > h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60px;
+            color: rgb(20, 23, 24);
+            margin: 10px;
+        }
+
+        header > p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: rgb(20, 23, 24);
+        }
+
+        body {
+            background-color: rgb(155, 221, 221);
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;    
+        }
+
+        main {
+            background-color: rgb(91, 165, 184);
+            border-radius: 10px;
+            flex: 1;
+            letter-spacing: 1.6px;
+            line-height: 30px;
+        }
+
+        footer {
+            margin: 20px;
+            padding: 10px;
+            align-self: center;
+            width: fit-content;
+            background-color: rgb(91, 165, 184);
+            border-radius: 10px;
+        }
+
+        footer P {
+            font-size: 14px;
+            font-style: italic;
+            color: rgb(81, 88, 90);
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Tags em HTML</h1>
-    <p>Em HTML nós podemos adiconar tags para diversos fins. Passe o mouse sobre cada elemento para verificar que tag usar</p>
-    <ul>
-        <li><abbr title="Use a tag &lt;p&gt;">Paágrafos</abbr></li>
-        <li><abbr title="Use a tag &lt;h1&gt; até &lt;h6&gt;">Títulos</abbr></li>
-        <li><abbr title="Use a tag &lt;img&gt;">Imagens</abbr></li>
-        <li><abbr title="Use a tag &lt;abbr&gt;">Abreviações</abbr></li>
-        <li><abbr title="Use a tag &lt;code&gt;">Códigos-fonte</abbr></li>
-        <li><abbr title="Use a tag &lt;ol&gt;">Lista numeradas</abbr></li>
-        <li><abbr title="Use a tag &lt;ul&gt;">Listas com demarcadores</abbr></li>
-    </ul>
+    <header>
+        <h1>Tags em HTML</h1>
+        <p>Em HTML nós podemos adiconar tags para diversos fins. Passe o mouse sobre cada elemento para verificar que tag usar</p>
+    </header>
+    <main>
+        <ul>
+            <li><abbr title="Use a tag &lt;p&gt;">Parágrafos</abbr></li>
+            <li><abbr title="Use a tag &lt;h1&gt; até &lt;h6&gt;">Títulos</abbr></li>
+            <li><abbr title="Use a tag &lt;img&gt;">Imagens</abbr></li>
+            <li><abbr title="Use a tag &lt;abbr&gt;">Abreviações</abbr></li>
+            <li><abbr title="Use a tag &lt;code&gt;">Códigos-fonte</abbr></li>
+            <li><abbr title="Use a tag &lt;ol&gt;">Lista numeradas</abbr></li>
+            <li><abbr title="Use a tag &lt;ul&gt;">Listas com demarcadores</abbr></li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <style>
 
         body {
-            background-color: rgb(135, 48, 248);
+            background-color: rgb(158, 140, 180);
             font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
             min-height: 100vh; /* Ocupa a tela inteira */
             display: flex; /* Essa ajuda a controlar o posicionameto dos elementos, por padrão, horizontalmente e a esquerda */
@@ -18,11 +18,11 @@
         }
 
         div { /* Ajustes da div que contém os videos */
-            display: flex; /* Ajusta os vídeos lado a lado */ 
+            display: flex; /* Permite controlar o alinhamento dos vídeos. Sem ele os outros não funcionam */ 
             flex-direction: column; /* Organiza os vídeos em verticalmente */
-            align-items: center; /* Centraliza os vídeos horizontalmente */
+            align-items: center; /* Centraliza os vídeos na tela */
             gap: 20px; /* Espaçamento entre os vídeos */
-            width: 100%;
+            width: 100%; /* Faz com que a 'div' ocupe a tela inteira */
         }
 
         footer {
@@ -50,6 +50,7 @@
         <source src="midia/meuvideo.webm.webm" type="video/webm">
         <p>Seu navegador não tem compatibilidade com vídeos HTML5.  </p>
     </video>
+    
     <h1>Inserindo vídeos do YouTube (Servidores externos)</h1>
     <iframe width="550" height="315" src="https://www.youtube.com/embed/X-lXfmWToIY?si=Aatn_owR_CpSJVFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
 </div>

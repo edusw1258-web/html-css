@@ -10,6 +10,9 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: white;
             margin: 0px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -48,7 +51,8 @@
             background-color: lightgray;
             text-align: center;
             padding: 4px;
-            margin: 0px; /* Precisamos adicionar um 'margin' de 0 porque o navegador entende isso como uma parágrafo e aduciona uma margem de automática de 16px, o que não é o que queremos. */
+            margin: auto;
+            width: 100%;
         }
 
         footer > p {
@@ -90,12 +94,14 @@
                 </aside>
             </article>
         </section>
+        
+        <div id="bola">
+            
+        </div>
     </main>
+
     <footer>
         <p>Desenvolvido por Gabriel Eduardo</p>
     </footer>
-    <div id="bola">
-        
-    </div>
 </body>
 </html>

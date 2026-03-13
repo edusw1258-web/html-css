@@ -9,21 +9,57 @@
         body {
             text-align: center;
             background-color: lightslategrey;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .centralize {
+            background-color: aliceblue;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: fit-content; /* Faz com a caixa se adapte ao tamanho do conteúdo */
+            box-shadow: 0px 5px 10px black;
         }
 
         h1 {
             font-family: Arial, Helvetica, sans-serif;
+            margin: 20px auto;
+            background-color: aliceblue;
+            color: black;
+            padding: 20px 40px;
+            border-radius: 10px;
+            width: fit-content; /* Faz com a caixa se adapte ao tamanho do conteúdo */
+            align-self: center; /* Alinha o h1 ao centro da tela. O 'align-self' funciona apenas com o 'display:flex' */
+            box-shadow: 0px 5px 10px black;
         }
-        a {
+
+        a { /* O 'inline-block' permite que 'a' receba parâmetros configuráveis de 'margin' e outros atributos simliares, algo que não é aplicável somente ao 'inline' */
             display: inline-block;
             margin: 10px;
+        }
+
+        footer {
+            background-color: antiquewhite;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            text-align: center;
+            color: black;
+            padding: 1px 0;
+            margin: 0%;
         }
 
     </style>
 </head>
 <body>
+    <h1 class="principal">Vídeos interessantes para assistir</h1>
     <div class="centralize">
-        <h1>Vídeos interessantes para assistir</h1>
         <a href="pg01.html">
             <img width="300" src="https://img.youtube.com/vi/bbT_a7n5D7U/hqdefault.jpg" alt="">  
         </a>
@@ -42,5 +78,8 @@
             <img width="300" src="https://img.youtube.com/vi/Ejkb_YpuHWs/hqdefault.jpg" alt="">
         </a>
     </div>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

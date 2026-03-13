@@ -5,19 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redes Sociais</title>
     <style>
+
         body {
-            background-color: rgb(121, 74, 231);
+            background-color: rgb(137, 115, 190);
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 10px;
             padding: 10px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh
         }
 
         a {
-            color: red;
+            color: rgb(199, 81, 81);
         }
         
         a:hover {
             color: green;
+        }
+
+        footer {
+            margin: auto;
+        }
+
+        footer p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            text-align: center;
+            color: black;
         }
         
     </style>
@@ -25,9 +40,11 @@
 <body>
     <h1>Perfil nas redes sociais</h1>
     <h2>Esta é a página com o perfil das redes sociais do professor Gustavo Guanabara</h2>
+
     <h3>Quem ele é?</h3>
     <div><img src="foto-perfil-guanabara.png" alt="Foto de perfil"></div>
     <p>O professor Gustavo Guanabara é um instrutor brasileiro conhecido por seu excelente trabalho enisando pessoas sobre a área de tecnologia, tanto em curos oficiais com certificações quanto em suas redes sociais.</p>
+    
     <h3 class="esq">Contatos:</h3>
     <ul>
         <li>
@@ -46,5 +63,8 @@
             <img src="icone-facebook.png" alt="Facebook">
             <a href="https://www.facebook.com/cursoemvideo/" target="_blank">Facebook</a></li>
     </ul>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

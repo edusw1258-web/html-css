@@ -6,6 +6,8 @@
     <title>Listas</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <style>
+
+        
         body {
             background-color: rgba(55, 6, 100, 0.979);
             font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -15,6 +17,26 @@
         h1 {
             font-family:'Courier New', Courier, monospace;
             color: rgb(175, 175, 240);
+        }
+
+        ol.caderno {
+            background-color: #f8d857;
+            color: black;
+            padding: 15px 30px;
+            border-left: 6px solid rgb(177, 102, 4); /* Cria uma borda na esquerda */
+            font-family: 'Courier New', Courier, monospace;
+            width: fit-content; /* Ajusta o tamanho do caderno de acordo com o conteúdo */
+
+            background-image: repeating-linear-gradient( /* Cria um desenho de caderno, adicionando linhas */
+                to bottom, /* O desenho das linhas vai de baixo para cima */
+                transparent, /* Inicia com uma linha transparente em 0 px */
+                transparent 22px, /* A linha transparente vai até 22 px */
+                #9fbdee 23px
+            );
+        }
+
+        ol.caderno li { /* Estiliza as linhas do caderno para cada item, adicionando um espaço entre as linhas */
+            line-height: 24px;
         }
 
         h2 {
@@ -47,25 +69,6 @@
             font-size: 10px;
         }
 
-        ol.caderno {
-            background-color: #f8d857;
-            color: black;
-            padding: 15px 30px;
-            border-left: 6px solid rgb(177, 102, 4); /* Cria uma borda na esquerda */
-            font-family: 'Courier New', Courier, monospace;
-            width: fit-content; /* Define o tamanho do caderno de acordo com o conteúdo */
-
-            background-image: repeating-linear-gradient( /* Cria um desenho de caderno, adicionando linhas */
-                to bottom, /* O desenho das linhas vai de baixo para cima */
-                transparent, /* Espaço entre as linhas do caderno*/
-                transparent 22px, /* Altura do espaço entre as linhas */
-                #9fbdee 23px
-            );
-        }
-
-        ol.caderno li { /* Estiliza as linhas do caderno para cada item, adicionando um espaço entre as linhas*/
-            line-height: 24px;
-        }
     </style>
 </head>
 <body>
@@ -125,11 +128,12 @@
             <li>Pokémon</li>
         </ul>
     </ol>
+    
     <h2>Lista de definição</h2>
     <dl>
         <dt><abbr title="Hypertext Markup Language">HTML</abbr></dt>
         <dd>Linguagem de marcação para criação de páginas web.</dd>
-        <dt>CSS</dt>
+        <dt><abbr title="Cascading Style Sheets">CSS</abbr></dt>
         <dd>Linguagem de marcação de estilo para páginas web.</dd>
         <dt>JavaScript</dt>
         <dd>Linguagem de programação para criar interatividade em páginas web.</dd>

@@ -4,14 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 007</title>
+    <style>
+        
+        body {
+            background-color: rgb(223, 93, 70);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        footer {
+            margin: auto;
+        }
+
+        footer p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            text-align: center;
+            color: black;
+        }
+        
+    </style>
 </head>
 <body>
-    <h1>Imagens dinâmicas</h1>
-    <p>Estas imagens mudam de tamanho conforme o tamanho da tela.</p>
-    <picture>
-        <source media="(max-width: 600px)" srcset="./imagens/paisagem-p.png">
-        <source media="(max-width: 1200px)" srcset="./imagens/paisagem-m.png">
-        <img src="./imagens/paisagem-g.png" alt="Imagem dinâmica">
-    </picture>
+    <main>
+        <h1>Imagens dinâmicas</h1>
+        <p>Estas imagens mudam de tamanho conforme o tamanho da tela.</p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="./imagens/paisagem-p.png">
+            <source media="(max-width: 1200px)" srcset="./imagens/paisagem-m.png">
+            <img src="./imagens/paisagem-g.png" alt="Imagem dinâmica">
+        </picture>
+    </main>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

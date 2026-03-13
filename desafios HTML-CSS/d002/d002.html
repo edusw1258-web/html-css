@@ -11,14 +11,36 @@
             background-color: coral;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
+            align-items: center; /* alinha os elementos denttro de uma caixa ao centro */
+            text-align: center; /*Centraliza o texto dentro de uma caixa */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        footer {
+            margin: auto;
+        }
+
+        footer p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
             text-align: center;
+            color: burlywood;
         }
 
     </style>
 </head>
 <body>
     <h1>Desafio das imagens</h1>
-    <p>Inserir uma imagem é muito simples, tanto do ícone da página quanto do corpo da página.</p>
+    <p>Inserir uma imagem é muito simples, tanto do ícone quanto do corpo da página.</p>
     <img src="d002png.png" alt="Imagem PNG de exemplo">
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

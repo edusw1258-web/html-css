@@ -6,14 +6,16 @@
     <link rel="shortcut icon" href="html.ico" type="image/x-icon">
     <title>Hierarquia entre Títulos</title>
     <style>
+
         body {
             background-color: black;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: purple;
             min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport, ou seja, a tela inteira */
-            display: flex; /* Essa ajuda a controlar o posicionamento */
-            flex-direction: column; /* Essa parte é para o footer ficar no final da página */
+            display: flex; /* Essa ajuda a controlar o posicionamento, por padrão, horizontalmente e a esquerda */
+            flex-direction: column; /* Organiza os elementos verticalmente */
         }
+
         h2 {
             color: orange;
             font-family: 'Times New Roman', Times, serif;
@@ -27,14 +29,15 @@
         footer {
             text-align: center;
             margin-top: auto;
-            font-size: 14px;
-            color: gray;
         }
         
         footer p {
             margin: 0;
             font-style: italic;
+            font-size: 14px;
+            color: gray;
         }
+        
     </style>
 </head>
 <body>

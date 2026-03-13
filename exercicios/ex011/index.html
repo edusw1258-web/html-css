@@ -17,7 +17,7 @@
             margin-top: auto;
             font-size: 14px;
             color: rgb(61, 54, 54);
-            opacity: 0.8;
+            opacity: 0.8; /* Diminui ou aumenta a capacidade de transparencia */
         }
 
         footer p {
@@ -43,6 +43,7 @@
     <h1>Imagens dinâmicas</h1>
     <p>Tente abrir esse site em diferentes dispositivos ou simplesmente diminua o tamanho do navegador.</p>
     <picture>
+        <!-- O navegador identifica de cima para baixo, caso um não seja atendido ele mostra o próximo. O 'source' por si só não mostra imagem nenhuma, é necessário usar o 'img'. As 'source' funcionam como se fossem condições e o 'img'' a condição final caso nenhuma 'source' seja atendida -->
         <source media="(max-width: 600px)" srcset="imagens/foto-p.png" type="image/png"> <!-- Imagem para telas menores que 600px -->
         <source media="(max-width: 1000px)" srcset="imagens/foto-m.png" type="image/png"> <!-- Imagem para telas menores que 1000px caso a iamgem padrão não seja suportada -->
         <img src="imagens/foto-g.png" alt="Foto grande"> <!-- Imagem padrão -->
@@ -56,8 +57,8 @@
         <source src="midia/song.mp3" type="audio/mpeg"></source> <!-- Aqui podemos por formatos alternativos para navegadores que não suportam mp3. O atributo 'pereload' faz com que o áudio seja carregado automaticamente assim que a página for aberta -->
     </audio>
     <p>Infelizmente seu navegador não consegue reproduzir áudio.</p>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy; Gabriel Eduardo</p>
-</footer>
 </html>
