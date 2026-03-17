@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Imagens de Fundo</title>
+    <style>
+        
+        body {
+            border: dashed black;
+            margin: 0px;
+            padding: 0px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+            grid-template-rows: repeat(3, 100px);  /* 3 linhas de 100px */
+        }
+
+        div {
+            height: 100px;
+            background-size: 80px;
+        }
+
+        #q1 {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+
+        #q2 {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+
+        #q3 {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+
+        #q4 {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+        }           
+
+        #q5 {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }            
+
+        #q6 {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-repeat: no-repeat;
+            background-position: right center ;
+        }           
+
+        #q7 {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-repeat: no-repeat;
+            background-position: left bottom;
+        }           
+
+        #q8 {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+
+        #q9 {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="q1"></div>
+    <div id="q2"></div>
+    <div id="q3"></div>
+    <div id="q4"></div>
+    <div id="q5"></div>
+    <div id="q6"></div>
+    <div id="q7"></div>
+    <div id="q8"></div>
+    <div id="q9"></div>
+</body>
+</html>
