@@ -9,7 +9,7 @@
 
         
         body {
-            background-color: rgba(55, 6, 100, 0.979);
+            background-color: rgba(96, 70, 243, 0.979);
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             color: bisque;
         }
@@ -27,11 +27,11 @@
             font-family: 'Courier New', Courier, monospace;
             width: fit-content; /* Ajusta o tamanho do caderno de acordo com o conteúdo */
 
-            background-image: repeating-linear-gradient( /* Cria um desenho de caderno, adicionando linhas */
-                to bottom, /* O desenho das linhas vai de baixo para cima */
-                transparent, /* Inicia com uma linha transparente em 0 px */
-                transparent 22px, /* A linha transparente vai até 22 px */
-                #9fbdee 23px
+            background-image: repeating-linear-gradient( /* Cria um desenho de caderno, adicionando linhas. Aqui, a a cada 22 px, adiciona uma linha preta */
+                to bottom, /* O desenho das linhas começa na parte de inferior do caderno */
+                transparent, /* Inicia com uma linha transparente em 0 px e vai até 22 px */
+                transparent 22px, /* A linha transparente vai até 22 px, que é os espaço entre as linhas */
+                #0e0e0e 23px /* Aqui, é a linha preta (1px) */
             );
         }
 
@@ -49,12 +49,11 @@
 
         dd {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: rgb(151, 146, 228);
+            opacity: 0.6;
         }
 
         dt {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: aqua;
         }
 
         footer {
@@ -138,8 +137,8 @@
         <dt>JavaScript</dt>
         <dd>Linguagem de programação para criar interatividade em páginas web.</dd>
     </dl>
+    <footer>
+        <p>&copy;Gabriel Eduardo</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy;Gabriel Eduardo</p>
-</footer>
 </html>

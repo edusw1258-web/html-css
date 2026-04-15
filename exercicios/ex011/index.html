@@ -6,7 +6,6 @@
     <title>Mídias em HTML5</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         body {
             background-color: rgb(82, 116, 146);
             margin-top: auto;
@@ -36,14 +35,13 @@
             color: rgb(131, 8, 8);
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
-        
     </style>
 </head>
 <body>
     <h1>Imagens dinâmicas</h1>
     <p>Tente abrir esse site em diferentes dispositivos ou simplesmente diminua o tamanho do navegador.</p>
     <picture>
-        <!-- O navegador identifica de cima para baixo, caso um não seja atendido ele mostra o próximo. O 'source' por si só não mostra imagem nenhuma, é necessário usar o 'img'. As 'source' funcionam como se fossem condições e o 'img'' a condição final caso nenhuma 'source' seja atendida -->
+        <!-- O navegador identifica as 'source' de cima para baixo, caso um não seja atendidoa, ele mostra o próximo. O 'source', por si só, não mostra imagem nenhuma, é necessário usar o 'img'. As 'source' funcionam como se fossem condições, onde apenas indicam o endereço da imagem e não as renderiza, papel este que é do 'img', que funciona como condição final, caso nenhuma 'source' seja atendida. O navegador vai indetifcar os endereços contidos nas 'source' e redenrizar por meio da 'img' -->
         <source media="(max-width: 600px)" srcset="imagens/foto-p.png" type="image/png"> <!-- Imagem para telas menores que 600px -->
         <source media="(max-width: 1000px)" srcset="imagens/foto-m.png" type="image/png"> <!-- Imagem para telas menores que 1000px caso a iamgem padrão não seja suportada -->
         <img src="imagens/foto-g.png" alt="Foto grande"> <!-- Imagem padrão -->

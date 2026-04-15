@@ -7,29 +7,28 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         body {
             background-color: rgb(156, 56, 76);
             font-family: Arial, sans-serif;
             margin-top: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            display: flex; /* Permite ontrolar o posicionameto dos elementos */
+            flex-direction: column; /* Organiza os elementos verticalmente */
+            align-items: center; /* Centraliza os elementos horizontalmente */
+            min-height: 100vh; /* A conteúdo de 'body' ocupará 100% da vh */
         }
 
         h1 {
-            text-decoration: underline;
+            text-decoration: underline; /* Sublinhado */
         }
 
+        /* Acesso à página 2 */
         .acessop1 {
             width: 100%;
             text-align: right;
         }
 
         footer {
-            margin-top: auto; /* Empurra o footer para o final da tela */
-            opacity: 0.8;
+            margin-top: auto; /* Ocupa todo o espaço vazio antes do 'footer', o que faz com que ele seja empurrado para o fim da página */
         }
 
         footer p {
@@ -38,8 +37,8 @@
             font-size: 14px;
             font-style: italic;
             color: rgb(61, 54, 54);
+            opacity: 0.8;
         }
-
     </style>
 </head>
 <body>
@@ -53,8 +52,8 @@
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, cupiditate nesciunt ut ipsam praesentium iste repudiandae modi aperiam odio aliquam debitis voluptatem facere animi. Eos, cumque. Cum sequi asperiores cumque.</p>
     <div class="acessop1" style="text-align: right;"><a href="pagina02.html" target="_self">Ir para a página 2</a>
     </div>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy; Gabriel Eduardo</p>
-</footer>
 </html>

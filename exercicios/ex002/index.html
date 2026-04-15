@@ -13,12 +13,16 @@
             font-weight: lighter; /* Peso da fonte. Deixa mais ou menos grossa/escura */
             background-color: rgb(89, 179, 179);
             min-height: 100vh; /* Garante que o corpo ocupe toda a altura da viewport */
-            flex-direction: column; /* Alinha os elementos verticalmente */
-            display: flex; /* Essa ajuda a controlar o posicionameto dos elementos, por padrão, horizontalmente e a esquerda */
+            display: flex; /* Permite ontrolar o posicionameto dos elementos, nesse caso, os filhos de 'body' ('img', 'main' e 'footer'), */
+            flex-direction: column; /* Alinha os elementos verticalmente, precisa do 'display: flex' */
+        }
+
+        h1 {
+            text-align: center;
         }
 
         footer {
-            margin-top: auto; /* Empurra o rodapé para o final da página, ficará após a distância de 100vh definda em min-height */
+            margin-top: auto; /* Ocupa todo o espaçamento vazio entre o 'footer' e o 'main', precisa do 'min-height:100vh', 'display:flex' e 'flex-direction:column para funcionar */
         }
 
         footer p {
@@ -39,7 +43,7 @@
     <main>
         <h1>Parágrafos e quebras de linhas</h1>
         <hr>
-        <p>Um parágrafo pode ser escrito de qualquer forma desde que tudo esteja entre as tags 'p' e '/p'</p>
+        <p>Um parágrafo pode ser escrito de qualquer forma, desde que tudo esteja entre as tags 'p' e '/p'</p>
         <p>Se necessário quebrar um texto em algum lugar específico, usamos a tag 'br'.<br>
         Para usarmos os símbolos de abertura de tag sem necessariamente abrir uma tag usamos &lt e &gt seguidos de ponto e vírgula. <br>Veja: <mark>& l t ;</mark> tudo aqui dentro está entre os símbolos de abertura e fechadura de tags, mas no formato escrito. <mark>& g t ;</mark></p>
         <p>Vamos adicionar alguns símbolos especiais:

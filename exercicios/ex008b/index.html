@@ -32,7 +32,7 @@
             color: darkred;
             background-color: rgb(200, 200, 200);
             padding: 2px 4px;
-            border-radius: 4px;
+            border-radius: 4px; /* Adiciona bordas arredondadas */
         }
 
         q {
@@ -45,8 +45,8 @@
             font-style: italic;
             font-family: 'Courier New', Courier, monospace;
             color: rgb(78, 85, 78);
-            border-left: 4px solid darkgreen; /* Adiciona uma borda esquerda */
-            margin-left: 20px; /* Adiciona uma margem esquerda */
+            border-left: 4px solid rgb(0, 0, 0); /* Adiciona uma borda à esquerda */
+            margin-left: 20px; /* Adiciona uma margem à esquerda */
             padding-left: 10px; /* Adiciona um espaçamento interno à esquerda */
         }
 
@@ -63,17 +63,17 @@
 
         footer p {
             font-style: italic;
-            opacity: 1.2;
+            opacity: 1.2; /* Aumenta ou diminui a opacidade para tornar o texto mais ou menos visível */
         }
     </style>
 </head>
 <body>
     <h1>Outras formatações</h1>
     <h2>Código-fonte</h2>
-    <p>O comando <code>document.getElementeById("teste")</code> é escrito em JavaScript</p>
-    <!-- A tag 'pre' é usada para adicionar uma indentação -->
+    <p>O trecho do código <code>document.getElementeById("teste")</code> é escrito em JavaScript</p>
+    <!-- A tag 'pre' (preformatted text) é usada para adicionar uma indentação. Ela preserva o espaçamento entre as linhas e os espaçps em branco -->
     <pre>
-        <!-- a tag 'code' serve para destacar um trecho de códigos -->
+        <!-- a tag 'code' serve para destacar um trecho de códigos. Por padrão, vai adicionar uma fonte mais legível junto com um espaçamento -->
         <code>
             num = input("Digite um número: ")
             if num % 2 == 0:
@@ -85,7 +85,7 @@
 
     <!-- A tag 'q' serve para destacar uma citação curta, ocupando só o trecho que ela abrange (inline-level) -->
     <h2>Citações simples</h2>
-    <p>Como diria o pai de uma amigo:<q>o computador é um burro muito rápido</q></p>
+    <p>Como diria o pai de uma amigo:<q>o computador é um burro muito rápido.</q></p>
 
     <h2>Citações longas</h2>
     <p>Segundo o professor, em seu livro, <q>o computador é um burro muito rápido</q></p>
@@ -95,8 +95,8 @@
     </blockquote>
 
     <h2>Abreviações</h2>
-    <!-- a tag 'abbr' serve para destacar uma abreviação, trasformando o trecho em um 'link' com explicação ao passar o mouse -->
-    <p>Estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr> e estou adorando</p>
+    <!-- a tag 'abbr' serve para destacar uma abreviação, trasformando o trecho em uma espécie de 'link' com uma caixa de texto explicando ou dando a descrição ao passar o mouse por cima -->
+    <p>Estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr> e estou confiante.</p>
     <footer>
         <p>&copy;Gabriel Eduardo</p>
     </footer>

@@ -4,25 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de Caixas</title>
+    <link rel="shortcut icon" href="icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-        
+        body {
+            display: flex; /* Permite controlar o posicionameto dos elementos */
+            flex-direction: column; /* Organiza os elementos verticalmente */
+            min-height: 100vh; /* Garante que o corpo ocupe toda a altura da vh */
+        }
 
-        h1 {
+        /* Cria uma caixa */
+        h1 { 
             background-color: lightslategrey;
-            height: 300px;
-            width: 300px;
-            border: 30px solid black;
+            height: 300px; /* Altura da caixa */
+            width: 300px; /* Largura da caixa */
+            border: 30px solid black; /* Define a borda com largura, estilo e cor */
 
+            /* Adiciona o preenchimento interno */
             padding-top: 10px;
             padding-right: 10px;
             padding-bottom: 10px;
             padding-left: 10px;
 
+            /* Adiciona a margem externa */
             margin-top: 10px;
             margin-right: 10px;
             margin-bottom: 50px;
             margin-left: 10px;
 
+            /* Adiciona a decoração de contorno */
             outline-width: 20px;
             outline-style: dashed; /* Adiciona a decoração tracejada */
             outline-color: blue;
@@ -32,6 +41,7 @@
             line-height: 2.5;
         }
 
+        /* Cria uma caixa para o link */
         a {
             display: inline-block;
             border-width: 12px;
@@ -44,10 +54,22 @@
             margin: 10px 10px 0px 0px;
         }
 
+        footer {
+            margin-top: auto;
+        }
+
+        footer p {
+            text-align: center;
+            font-style: italic;
+            color: rgb(107, 104, 104);
+        }
     </style>
 </head>
 <body>
     <h1>Exemplo de caixa box-level</h1>
     <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level. </a>Vamos ver como tudo isso funciona</p>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

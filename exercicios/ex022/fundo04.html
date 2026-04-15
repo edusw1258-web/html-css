@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testando Imagens de Fundo</title>
+    <link rel="shortcut icon" href="imagens/icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-        
         body {
             border: dashed black;
             margin: 0px;
             padding: 0px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
-            grid-template-rows: repeat(3, 100px);  /* 3 linhas de 100px */
+            grid-template-columns: repeat(3, 1fr); /* Divide o body em 3 colunas iguais (1fr) */
+            grid-template-rows: repeat(3, 100px);  /* Divide o body em 3 linhas de 100px */
         }
 
+        /* Div que contém as imagens*/ 
         div {
             height: 100px;
             background-size: 80px;
@@ -73,7 +74,6 @@
             background-repeat: no-repeat;
             background-position: right bottom;
         }
-
     </style>
 </head>
 <body>

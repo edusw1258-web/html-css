@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de hover</title>
+    <link rel="shortcut icon" href="icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background-color: darkslategrey;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         div > p {
             display: none; /* Esconde o texto inicialmente. O 'none' significa que não aparece nem ocupa espaço */
         }
 
-        div:hover > p { /* Altera o estado quando se passar o mouse por cima */
-        display: block; /* Mostra o texto quando se passar o mouse por cima */
+        div:hover > p { /* Pseud-classe que altera o estado quando se passar o mouse por cima */
+        display: block; /* Mostra o texto quando se passar o mouse por cima, sobresecrevendo o 'none' */
         color: rgb(255, 255, 255);
-        background-color: red;
+        background-color: rgb(11, 214, 62);
         width: 300px;
         }
 
-        div:hover { /* Muda a cor da fonte ao passar o mouse por cima */
-        color: red;
+        div:hover { /* Pseudo-classe que muda a cor da fonte ao passar o mouse por cima */
+        color: rgb(255, 255, 255);
         }
         
+        footer {
+            margin-top: auto;
+        }
+
+        footer > p {
+            text-align: center;
+            font-style: italic;
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
@@ -34,5 +47,8 @@
         <p>Texto escondido...</p>
     </div>
     <p>Fim do exemplo</p>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

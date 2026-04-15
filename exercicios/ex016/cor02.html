@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradiente com CSS</title>
+    <link rel="shortcut icon" href="icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
-        * { /* Seletor universal das CSS*/
-            height: 100%;
-        }
-
         body { /* Cria um gradiente que forma o efeito degrade na página */
             background-image: linear-gradient(to right, #9474e7, #0A13E0);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
+        footer {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer > p {
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
     <h1>Testando gradiente</h1>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

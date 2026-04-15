@@ -6,38 +6,42 @@
     <title>Vídeos em HTML5</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         body {
             background-color: rgb(158, 140, 180);
             font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-            min-height: 100vh; /* Ocupa a tela inteira */
-            display: flex; /* Essa ajuda a controlar o posicionameto dos elementos, por padrão, horizontalmente e a esquerda */
+            min-height: 100vh; /* Ajusta a pagina para o tamanho definido (largura) */
+            display: flex; /* Permite controlar o posicionameto dos elementos */
             flex-direction: column; /* Organiza os elementos verticalmente */
             align-items: center; /* Centraliza horizontalmente */
-            margin: 0; /* Remove margens padrão posta pelo navegador */
+            margin: 0; /* Remove as margens */
         }
 
-        div { /* Ajustes da div que contém os videos */
-            display: flex; /* Permite controlar o alinhamento dos vídeos. Sem ele os outros não funcionam */ 
-            flex-direction: column; /* Organiza os vídeos em verticalmente */
-            align-items: center; /* Centraliza os vídeos na tela */
+        /* Ajustes da div que contém os videos */
+        div { 
+            display: flex; /* Permite controlar o posicionameto dos elementos */
+            flex-direction: column; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
             gap: 20px; /* Espaçamento entre os vídeos */
-            width: 100%; /* Faz com que a 'div' ocupe a tela inteira */
+            width: 100%; /* Faz com que a 'div' ocupe 100% da vw */
+        }
+
+        div > video {
+            border: 3px solid rgb(100, 80, 140);
+            border-radius: 8px;
         }
 
         footer {
             text-align: center;
             margin-top: auto;
-            font-size: 14px;
-            color: rgb(61, 54, 54);
-            opacity: 0.8;
         }
         
         footer p {
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-style: italic;
+            font-size: 14px;
+            color: rgb(61, 54, 54);
+            opacity: 0.8;
         }
-
     </style>
 </head>
 <body>
@@ -55,8 +59,8 @@
     <iframe width="550" height="315" src="https://www.youtube.com/embed/X-lXfmWToIY?si=Aatn_owR_CpSJVFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
 </div>
     
-</body>
 <footer>
     <p>&copy; Gabriel Eduardo</p>
 </footer>
+</body>
 </html>

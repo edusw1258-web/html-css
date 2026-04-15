@@ -5,34 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo-classes</title>
+    <link rel="shortcut icon" href="icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         div {
-            display: inline-block;
-            /* Essa ajuda a controlar o posicionamento */
+            display: inline-block; /* Poe as 'div' lado a lado na horizontal, podendo alterar, inclusive, a width e o height */
             background-color: aqua;
-            border: 1px solid black;
-            /* Adiciona uma borda */
-            text-align: center;
-            /* Centra o texto */
-            height: 200px;
-            /* Altera a altura */
-            width: 200px;
-            /* Altera a largura */
+            border: 1px solid black; /* Adiciona uma borda */
+            text-align: center; /* Centra o texto */
+            height: 200px; /* Altera a altura */
+            width: 200px; /* Altera a largura */
+            flex-shrink: 0;
         }
 
-        div:hover {
-            /* Altera a cor quando se passar o mouse por cima */
+        div#container {
+            display: flex; /* Permite controlar o posicionameto dos elementos */
+            flex-direction: row; /* Alinha os elementos horizontalmente */
+        }
+
+        div:hover { /* Pseudo-classe que muda a cor da fonte ao passar o mouse por cima */
             background-color: red;
         }
-        
+
+        footer {
+            margin-top: auto;
+        }
+
+        footer > p {
+            text-align: center;
+            font-style: italic;
+            opacity: 0.7;
+        }
     </style>
 </head>
 
 <body>
-    <div>01</div>
-    <div>02</div>
-    <div>03</div>
+    <div id="container">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
-
 </html>

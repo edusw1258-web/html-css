@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fontes externas</title>
+    <link rel="shortcut icon" href="icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         /* '@font-face permite que fontes externas ou desconhecidas sejam aceitas nas CSS */
         @font-face {
             font-family: 'gotic'; /* Nome da fonte */
@@ -18,7 +18,12 @@
         body {
             font-family: 'gotic', 'Arial', Helvetica, sans-serif;
             font-size: 16px;
+            background-color: rgb(122, 146, 228);
             color: black;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
         }
 
         h1 {
@@ -26,10 +31,23 @@
             font-weight: normal;
         }
 
+        footer {
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 14px;
+            font-style: italic;
+            text-align: center;
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
     <h1>Título</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates beatae minima totam libero excepturi! Suscipit odio quas expedita eveniet voluptates! Quia debitis saepe quibusdam ducimus suscipit nobis explicabo reiciendis officiis.</p>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

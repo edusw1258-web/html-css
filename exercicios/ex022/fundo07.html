@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alinhamento Vertical e Horizontal</title>
+    <link rel="shortcut icon" href="imagens/icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         #container {
             background-image: url(imagens/target001.png);
             background-size: 100% 100%; /* Faz com que a imagem ocupe toda a tela. Usado para que a imagem não se repita */
             height: 94vh; /* Ocupará 94% da altura da tela */
             padding: 10px;
             background-color: purple;
-            position: relative; /* Se alinha conforme o fuxo da página.Serve como referência para o 'conteudo' se alinhar */
+            position: relative; /* Serve como referência para o 'position: absolute' */
         }
 
         #conteudo {
@@ -21,16 +21,15 @@
             height: 200px;
             width: 400px;
             background-color: yellow;
-            position: absolute; /* Se alinha em relação ao 'container'*/
+            position: absolute; /* Se alinha conforme o 'position relative'. Se não tiver um 'position: relative' ele alinha com 'body' ou o viewport */
 
             /* Se alinha conforme o fuxo da página. Por padrão, o alinhamento começa no canto superior esquerdo deste conteiner. Ou seja, este lado é que estará no centro do alinhamento */
-            top: 50%;
-            left: 50%;
+            top: 50%; /* Alinhamento vertical da caixa. Precisa do 'left' e 'transform' */
+            left: 50%; /* Alinhamento horizontal da caixa. Precisa do 'top' e 'transform' */
 
             /* Ajusta o alinhamento ao centro da página. Essa parte complementa o 'top' e 'left'. Posições negativas se movem para cima e para a esquerda e posições positivas se movem para baixo e para a direita */
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* Corrige o posicionamento, centralizando a caixa */
         }
-
     </style>
 </head>
 <body>

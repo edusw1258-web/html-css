@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tamanhos da Imagem</title>
+    <link rel="shortcut icon" href="imagens/icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         body {
             height: 100vh;
+            /* background individuais (opção 1) */
             background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
             background-position: center center; /* Centraliza a imagem. */
             background-repeat: no-repeat; /* Não repete a imagem. Nesse caso, só irá aparecer a imagem na posição que foi definida. */
             background-size: cover; /* Faz com que a imagem ocupe toda a tela mas suas bordas são removidas ao depender do tamanho da tela */
-            background-attachment: fixed;
+            background-attachment: fixed; /* Faz com que a imagem fique estática na página. Não será afetada pelo scroll */
 
-            /* shorthand background */
+            /* shorthand background (opção 2) */
             /* background: color > image > position > repeat > size > attachment */
             background: black url(imagens/wallpaper002.jpg) center center no-repeat cover fixed;
 
@@ -29,7 +30,6 @@
             border: 1px solid darkgreen;
             border-radius: 15px;
         }
-
     </style>
 </head>
 <body>

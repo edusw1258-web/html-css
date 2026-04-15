@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste de Imagem de Fundo</title>
+    <link rel="shortcut icon" href="imagens/icon/favicon-32x32 copy.png" type="image/x-icon">
     <style> 
-
         body {
             background-image: url('imagens/wallpaper001.jpg');
         }
 
+        /* Definições gerais para todas div's com a class 'q' */
         .quadrado {
             border: 10px solid black; /* Adiciona uma borda preta */
             width: 300px; /* Largura da 'div' */
             height: 300px; /* Altura da 'div' */
             display: inline-block; /* Põe as 'div' lado a lado na horizontal */
-            border-radius: 10px;
+            border-radius: 10px; /* Adiciona cantos arredondados */
             background-color: lightgray;
         }
 
+        /* Fundo com cor comum*/
         #q1 {
             background-color: skyblue;
         }
 
+        /* Fundo com degrade */
         #q2 {
             background-image: linear-gradient(to bottom, yellow, red);
         }
 
+        /* Fundo com imagem personalizada */
         #q3 {
             background-image: url('imagens/pattern003.png');
         }
-
     </style>
 </head>
 <body>

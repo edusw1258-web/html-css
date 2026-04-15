@@ -12,25 +12,25 @@
             background-color: #f0f0f0;
             margin: 20px; /* Espaçamento ao redor do conteúdo */
             padding: 20px; /* Espaçamento entre o conteúdo e a margem*/
-            min-height: 100vh; /* Garante que o 'body' ocupe toda a altura da viewport */
-            display: flex; /* Essa ajuda a controlar o posicionameto dos elementos, por padrão, horizontalmente e a esquerda */
-            flex-direction: column; /* Organiza os elementos verticalmente */
+            min-height: 100vh; /* Garante que o 'body' ocupe toda a altura da viewport, sem ele isso o 'footer' estaria logo após o conteúdo */
+            display: flex; /* Permite ontrolar o posicionameto dos elementos, nesse caso, os filhos de 'body' ('img', 'main' e 'footer'), */
+            flex-direction: column; /* Organiza os elementos verticalmente. Precisa do 'display: flex' */
         }
 
         p {
             color: #797575;
             line-height: 1.6; /* Melhorar a legibilidade do texto, deixando um maior espaçamento entre linhas e letras */
-            overflow: hidden; /* Garantir que o texto não flua ao redor da imagem */
+            overflow: hidden; /* Garantir que o texto não vaze para a área da imagem, alinhando o texto a direita. Vai afetar somente o primeiro 'p', caso queiramos que todos os parágrafos sejam afetados, envelopar os 'p' dentro de uma 'main' */
         }
 
         img {
-            float: left; /* Faz com que a imagem fique a esquerda e o texto a direita */
-            width: 180px; /* Muda o tamanho da imagem para se encaixar melhor com o texto */
+            float: left; /* Faz com que a imagem fique a esquerda e o texto a direita, sem um invadir o espaço do outro */
+            width: 180px; /* Muda o tamanho da imagem */
             margin: 0 20px 10px 0; /* Espaçamento entre a imagem e o texto */
         }
 
         footer {
-            margin-top: auto; /* Espaçamento entre o 'footer' e o 'main', precisa do 'min-height:100vh', 'display:flex' e 'flex-direction:column para funcionar */
+            margin-top: auto; /* ocupa todo o espaçamento vazio entre o 'footer' e o 'main', precisa do 'min-height:100vh', 'display:flex' e 'flex-direction:column para funcionar */
             text-align: center; 
         }
 
@@ -43,7 +43,7 @@
     </style>
 </head>
 <body>
-    <main>
+    <main> 
         <img src="imagens/HTML5_Logo_512 (1).png" alt="Logo HTML5">
         <h1>Olá, mundo!</h1>
         <hr>

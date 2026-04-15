@@ -6,10 +6,12 @@
     <title>Estilos Inline</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         body {
             background-color: rgb(156, 56, 76);
             font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         h1 {
@@ -21,22 +23,22 @@
         }
 
         p {
-            text-align: justify;
+            text-align: justify; /* Adiciona espaçamento entre as palavras para que todas as linhas fiquem alinhadas */
         }
 
         footer {
             text-align: center;
             margin-top: auto;
+        }
+
+        footer > p {
+            text-align: center;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
             font-size: 14px;
             color: rgb(61, 54, 54);
             opacity: 0.8;
-        }
-
-        footer p {
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-style: italic;
-        }
-          
+        }  
     </style>
 </head>
 <body>
@@ -48,8 +50,8 @@
     <h1>Capítulo 2</h1>
     <h2>Capítulo 2.1</h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, cupiditate nesciunt ut ipsam praesentium iste repudiandae modi aperiam odio aliquam debitis voluptatem facere animi. Eos, cumque. Cum sequi asperiores cumque.</p>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy; Gabriel Eduardo</p>
-</footer>
 </html>

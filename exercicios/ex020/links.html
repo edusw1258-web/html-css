@@ -5,42 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
+    <link rel="shortcut icon" href="icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(66, 176, 226);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         a {
-            color: #1beb00; /* Cor não aparece porque foi sobrescrita pela cor da  'a:visited' */
+            color: #000000; /* Cor não aparece porque foi sobrescrita pela cor da  'a:visited' */
             text-decoration: none; /* Remove o sublinhado e qualquer outra decoração do link*/
             font-weight: bold;
         }
 
-        a:hover { /* Cor que aparce quado o mouse passa por cima do link, está também é sobrescrita por 'a:visited' */
-            color: rgb(27, 26, 26);
-            text-decoration: underline;
-        }
-
-        a:visited { /* Muda a cor da fonte se o site já foi visitado */
+        
+        a:visited { /* Pseudo-classe que muda a cor da fonte se o site já foi visitado */
             color: rgb(214, 3, 3)
         }
-
-        a:active { /* Muda a cor quando o link é clicado */
+        
+        a:hover { /* Pseudo-classe que muda a cor da fonte quando o mouse passa por cima do link */
+            color: rgb(116, 116, 116);
+            text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse por cima do link */
+        }
+        
+        a:active { /* Pseudo-classe que muda a cor quando o link é clicado */
             color: rgb(255, 251, 5);
         }
 
-        .especial { /* Seleciona o link com a classe "especial" e muda sua cor */
-            background-color: rgb(0, 255, 98);
+        .especial { /* Seleciona o link com a classe "especial" */
+            background-color: rgb(0, 0, 0); /* Muda a cor de fundo do link com a classe "especial" */
         }
-
+        
         a::after { /* Pseudo-elemento que adiciona um conteúdo depois do link */
             content: '[link]'; /* Adiciona conteudo depois do link. Nesse caso, o conteúdo será "[link]" */
             text-decoration: none; /* Remove o sublinhado e qualquer outra decoração do link */
             font-weight: normal;
             color: rgb(245, 39, 2);
-        }
+        }    
         
+        .especial::after { /* Pseudo-elemento que adiciona um conteúdo depois do link com a classe "especial" */
+            content: '[link]'; /* Adiciona conteudo depois do link. Nesse caso, o conteúdo será "[link especial]" */
+            text-decoration: none; /* Remove o sublinhado e qualquer outra decoração do link */
+            font-weight: normal;
+            color: rgb(245, 39, 2);
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        footer > p {
+            text-align: center;
+            font-style: italic;
+            opacity: 0.7;
+        }
     </style>
 </head>
 
@@ -51,6 +72,8 @@
         <li><a href="https://youtube.com/cursoemvideo/" class="especial" target="_blank">Canal do YouTube</a></li>
         <li><a href="https://www.cursoemvideo.com" target="_blank">Site do Curso em Vídeo</a></li>
     </ul>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
-
 </html>

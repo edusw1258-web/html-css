@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas em HTML</title>
+    <link rel="shortcut icon" href="icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -32,12 +33,14 @@
             color: white;
         }
 
+        /* Mais restritivo. Seleciona somente as 'th' que estão dentro de uma 'tr' e que estãodentro de uma 'thead' */
         thead > tr > th {
-            position: sticky; /* O 'sticky' faz com que o cabeçalho fique fixo na tela. Não funciona só  e precisa da indicação de onde irá se fixar, nesse caso o 'top' */
+            position: sticky; /* O 'sticky' faz com que o cabeçalho fique fixo na tela. Não funciona sozinho e precisa da indicação de onde irá se fixar, nesse caso o 'top' */
             top: -1px; /* Indica a posição onde o cabeçalho irá fixar. Essa parte é obrigatoria e complementa o 'position: sticky */
             background-color: gray;
         }
 
+        /* Muda a cor das linhas pares (2n). 'nth-child' atua como a função que irá selecionar as linhas */
         tbody > tr:nth-child(2n) {
             background-color: lightgray;
         }
@@ -68,6 +71,7 @@
         </caption>
         <thead>
             <tr>
+                /* O 'scope' promove acessibilidade à página. A tag definida com 'scope' irá ser a referência de uma linha/linhas e uma coluna/colunas */
                 <th scope="col">Estado</th>
                 <th scope="col" style="width: 100px;">População</th>
                 <th scope="col" style="width: 100px;">% da População</th>

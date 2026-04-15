@@ -6,16 +6,20 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #44803F, #B4CF66) /* cor de fundo com degradê */
+    background-image: linear-gradient(to right, #44803F, #B4CF66); /* cor de fundo com degradê */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 main {
     background-color: white;
     width: 500px; /* largura */
     padding: 10px; /* espaçamento interno, enetre o conteúdo e a borda */
-    margin: auto; /* espaçamento externo */
     border-radius: 9px; /* bordas arredondadas */
     box-shadow: 10px 10px 10px #ff583352; /* Adicona uma sombra */
+    margin: 20px auto; /* centraliza o elemento */
 }
 
 h1 {
@@ -31,3 +35,15 @@ h2 {
 p {
     text-align: justify;
 }
+
+footer {
+    text-align: center;
+    margin-top: auto;
+}
+
+footer > p {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
