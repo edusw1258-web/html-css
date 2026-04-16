@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe em HTML</title>
+    <style>
+        iframe {
+            width: 400px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de um iframe</h1>
+
+    <!-- Método 1 usando o 'a' (anchor) -->
+    <p>Aceesando o site do <a href="www.cursoemvideo.com" target="_blank">Curso em Vídeo</a> para aprender a programar.</p>
+
+    <!-- Método 2 usando 'iframe' -->
+    <p>
+        Acessando o site do 
+       <!-- O 'iframe' será a primeira opção do endereço do site -->
+       <!-- Caso o 'iframe' não funcione, podemos usar o 'a' que aponta para o mesmo endereço-->
+        <!-- O tamanho padrão de um 'iframe' é de 300x150px -->
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" height="500" width="400">
+            <a href="https://www.cursoemvideo.com" target="_blank"></a>
+        </iframe>
+
+
+        para aprender a programar.
+    </p>
+
+    <br>
+
+    <p>
+        Acesse o repositório do professor Gustavo Guanabara no 
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="400" width="200">
+            <a href="https://gustavoguanabara.github.io" target="_blank">GitHub</a>
+        </iframe>
+    </p>
+</body>
+</html>

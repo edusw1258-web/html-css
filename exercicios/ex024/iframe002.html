@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            display: block; /* Faz com que elemento se comporte como 'box-level' para que possa ser movido*/
+            margin: auto; /* Com o 'display: block' aplicado, o 'margin: auto' divide os espaços igualmente, assim, centralizando o 'iframe*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste com iframe</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere in quae optio quo molestiae commodi est dolore praesentium iste laudantium accusamus suscipit modi nihil consectetur quia, temporibus quasi nostrum quam!</p>
+
+    <iframe src="paginas_extra/pagina001.html" frameborder="0" height="500" width="500">
+        <p>Infelizmente seu navegador não é compatível com iframe</p>
+    </iframe>
+     
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iusto maiores fugit. Molestias, sunt autem vitae ullam odio consequatur unde, eos inventore temporibus corrupti impedit nobis iste dolore optio eum?</p>
+</body>
+</html>

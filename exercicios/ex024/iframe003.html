@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+           width: 95%; /* Faz com que o 'iframe' ocupe 95% da tela*/
+           height: 400px; /* Define a altura do 'iframe' para 400px */
+           border: 2px solid black; 
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea non adipisci ducimus quas optio! Ea harum recusandae consequatur ad possimus nostrum facere numquam ratione, alias dolores porro sequi vitae vero?</p>
+
+    <ul>
+        <!-- Precisamos definir como valor de 'target', o 'name' que foi dado ao 'iframe' -->
+        <li><a href="paginas_extra/pagina001.html" target="conteudo">Primeira página</a></li>
+        <li><a href="paginas_extra/pagina002.html" target="conteudo">Segunda página</a></li>
+        <li><a href="paginas_extra/pagina003.html" target="conteudo">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quis neque porro molestias ad aperiam eligendi voluptatibus veritatis blanditiis aliquid veniam consequuntur nesciunt a similique, maxime, accusantium molestiae nihil velit?</p>
+
+    <!-- Para que a página desejada possa abrir dentro do 'iframe', precisamos dar um 'name' a esse iframe. Tal 'name' será usado como o valor de 'target' dentro do link 'a' -->
+     <!-- O 'srcdoc' permite aicionar um conteúdo dentro do 'iframe' caso ele inicie vazio -->
+    <iframe id="tela" src="" frameborder="0" name="conteudo" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ex non, ad deleniti provident tempora, sunt accusantium, itaque libero iusto quis enim repellat perspiciatis officiis adipisci in explicabo. Officia, quae?</p><img src='imagens/cursoemvideo.png'>">
+        <p>Infelizmente seu navegador não é compatível com iframe</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, facilis. Voluptatum tenetur alias optio adipisci aperiam saepe aspernatur quos eligendi accusantium, quae, accusamus error porro nostrum necessitatibus incidunt quisquam a!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil facere laboriosam, voluptatibus delectus nostrum accusamus possimus mollitia, praesentium illum laudantium modi laborum nam dolorem quia, quos earum esse necessitatibus corporis.</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut soluta ad architecto qui possimus vero dolorum? Quis exercitationem atque aliquam temporibus, saepe architecto odit aliquid obcaecati suscipit explicabo animi repudiandae!</p>
+
+    <!-- Dentro do 'iframe' irá abrir a página que contém o formulário -->
+     <!-- O 'sandbox' define quais recursos o navegador pode ou não permitir dentro do 'iframe'. O valor 'sandbox' ativa as configurações máximas de segurança e os 'allow' são os recursos permitidos -->
+    <!-- O 'referrerpolicy' define a politica de segurança de 'iframe', impedindo que o mesmo possa saber informações sobre a página de origem -->
+    <iframe src="paginas_extra/pagina004.html" frameborder="0" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+        Seu navegador não suporta iframes...
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae debitis dolores dolorum doloremque magni dolore est tempora odio nisi, itaque animi maxime nobis, illo omnis quo, consectetur quod voluptas.</p>
+</body>
+</html>
