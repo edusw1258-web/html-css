@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários em HTML/title></title>
+</head>
+<body>
+    <!-- O 'action' define o endereço para onde são enviados os dados do formulário e o 'method' define o método de envio do formulário que pode ser 'get' ou 'post' -->
+    <!-- O 'autocomplete' desativa ou ativa o preenchimento automático do navegador '-->
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <!-- O 'label' faz o vinculo entre o texto e o 'input'-->
+            <label for="inome">Nome:</label>
+
+            <!-- O 'input' permite criar coisas para o usuário interagir com o formlulário -->
+            <!-- O 'required' torna o preenchimento deste campo obrigatório -->
+            <!--O 'maxlength' define o número máximo de caracteres permitidos -->
+            <!-- O 'placeholder' define o texto alternativo que fica dentro da caixa de texto quando ela estiver vazia. O texto alternativo some quando o usuário digita algo -->
+            <!-- O 'autocomplete' usado no 'input' tem mais opções. Aqui o 'name' define que o campo a ser preechido é do tipo 'name' -->
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome Completo" autocomplete="name">
+        </p>
+
+        <p>
+            <label for="imedia">Média</label>
+
+            <!-- O 'type="number"' cria um campo que só aceita números -->
+            <!-- 'min' e 'max' vai defenir os valores aceitos pelo campo (0 a 10)-->
+            <!-- 'step' define o intervalo de valores aceitos pelo campo (0.5)-->
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required>
+        </p>
+
+        <p>
+            <!-- O 'type="month"' cria um campo para selecionar um mês e um ano -->
+            <label for="imes">Período Letivo</label>
+            <input type="month" name="mes" id="imes">
+        </p>
+
+        <p>
+            <!-- O 'type="date"' cria um campo para selecionar uma data completa -->
+            <label for="idia">Dia da Prova</label>
+            <input type="date" name="dia" id="idia">
+        </p>
+
+        <p>
+            <!-- O 'type="time"' cria um campo para selecionar um horário -->
+            <label for="ihora">Horário da Prova</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+
+        <p>
+            <!-- O 'submit' cria um botão para enviar o formulário -->
+            <!-- O 'value' define o texto do botão -->
+            <input type="submit" value="Enviar">
+
+            <!-- O 'reset' cria um botão para limpar o formulário -->
+            <!-- O 'value' define o texto do botão -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
