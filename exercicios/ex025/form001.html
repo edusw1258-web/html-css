@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <!-- Todo formulário precisa ir dentro da tag 'form' -->
+    <!-- O 'autocomplete="off"' desativa o preenchimento automático do navegador -->
+    <!-- O 'action' define o endereço para onde serão enviados os dados do formulário -->
+    <!-- O 'method' define o método de envio do formulário que pode ser 'get' ou 'post' -->
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <!-- O 'input' permite criar coisas para o usuário interagir com o formlulário -->
+        <!-- O 'text' é um 'input' que cria uma caixa de texto -->
+        <!-- O 'label' faz o vinculo entre o texto e o 'input' -->
+         <!-- Ao 'for' devemos valorar apenas com 'id's, que será o 'id' do 'input' -->
+        <p><label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome">
+        </p>
+
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+
+        <!-- O 'submit' cria um botão para enviar o formulário -->
+        <p><input type="submit" name="enviar" id="enviar" value="Enviar"></p>
+    </form>
+</body>
+</html>

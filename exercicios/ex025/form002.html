@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <!-- O 'action' define o endereço para onde são enviados os dados do formulário. O 'method' define o método de envio do formulário que pode ser 'get' ou 'post' e o 'autocomplete' desativa ou ativa o preenchimento automático do navegador -->
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <!-- O 'label' faz o vinculo entre o texto e o 'input'. O 'label' vao conter o 'for' no qual vai o 'id' do 'input' -->
+            <label for="iuser">Usuário</label>
+            <!-- O 'input' permite criar coisas para o usuário interagir com o formlulário -->
+            <!-- O 'required' torna o preenchimento deste campo obrigatório -->
+            <!-- O 'minlength' define o tamanho mínimo do campo e o 'maxlength' define o tamanho máximo do campo -->
+            <!-- O 'size' define o tamanho da caixa de texto, mas não limita a quantidade de caracteres que podem ser digitados -->
+            <!-- O 'placeholder' define o texto alternativo que fica dentro da caixa de texto quando ela estiver vazia. O texto alternativo some quando o usuário digita algo -->
+            <input type="text" name="user" id="iuser" required minlength="5" maxlength="20" size="12" placeholder="Nome de usuário">
+        </p>
+        <p>
+            <!-- Parte do formulário referente a senha-->
+            <label for="isen">Senha:</label> 
+            <!-- O 'password', por padrão, cria uma uma caixa de texto que oculta os caracteres digitados -->
+            <input type="password" name="senha" id="isenha" required minlength="8" maxlength="20" placeholder="Mínimo de 8 caracteres">
+        </p>
+        <p>
+            <!-- O 'submit' cria um botão para enviar o formulário. O 'value' define o texto do botão -->
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
