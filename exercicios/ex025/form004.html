@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos em Formulários</title>
+</head>
+<body>
+    <!-- Pesquisar sobre expressões regulares (regex) -->
+    <h1>Exemplo de Formulário</h1>
+    <!-- O 'action' define o endereço para onde são enviados os dados do formulário e o 'method' define o método de envio do formulário que pode ser 'get' ou 'post' -->
+    <form action="cadastro.php" method="get">
+        <!-- A tag 'fieldset' serve para agrupar os campos de um formulário. O 'legend' serve para dar um titulo ao 'fieldset'-->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" minlength="3" maxlength="20" required>
+            </p>
+            
+            <p>
+                <!-- O 'label' faz o vinculo entre o texto e o 'input'-->
+                <!-- O 'for' do 'label' deve conter o 'id' do 'input' -->
+                <label for="imail">E-mail:</label>
+                <!-- O 'type="email"' cria um campo para digitar um endereço de e-mail' -->
+                <!-- O 'required' torna o preenchimento deste campo obrigatório -->
+                <!-- O 'autocomplete' usado no 'input' tem mais opções. Aqui o 'email' define que o campo a ser preechido é do tipo 'email' -->
+                <input type="email" name="mail" id="imail" required autocomplete="">
+            </p>
+            <p>
+                <!-- O 'type="tel"' cria um campo para digitar um número de telefone -->
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" required autocomplete="tel" placeholder="(xx) xxxxx-xxxx">
+            </p>
+        </fieldset>
+
+        <p>
+            <!-- O 'submit' cria um botão para enviar o formulário -->
+            <!-- O 'value' define o texto do botão -->
+            <!-- O 'reset' cria um botão para limpar o formulário -->
+            <!-- O 'value' define o texto do botão -->
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

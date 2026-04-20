@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários em HTML</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <!-- O 'type="radio"' cria um círculo para marcar uma opção, uma vez marcada, para desmarcar é necessário clicar no círculo -->
+            <!-- Para funcionar de modo correto, os 'input' com 'type="radio"' devem ter o mesmo 'name'. O 'id' deve permaecer diferente para cada 'input' -->
+            <!-- O 'checked' serve para marcar o 'input'. Apenas um dos 'input' deve ter o 'checked' -->
+            <!-- O 'value' é o valor que será enviado ao back-end-->
+            <input type="radio" name="sexo" id="ismasc" checked value="M"> <label for="ismasc">Masculino</label><br>
+            <input type="radio" name="sexo" id="isfem" value="F"> <label for="isfem">Feminino</label>
+        </fieldset>
+        <!-- O 'fieldset' serve para agrupar os campos de um formulário. O 'legend' serve para dar um titulo ao 'fieldset' -->
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <!-- O 'type="checkbox"' cria um campo para marcar uma opção -->
+            <!-- O 'label' faz o vinculo entre o texto e o 'input'-->
+            <input type="checkbox" name="efut" id="iefut"> <label for="iefut">Futebol</label> <br>
+            <input type="checkbox" name="ebasq" id="iebasq"> <label for="iebasq">Basquete</label> <br>
+            <input type="checkbox" name="eteni" id="ietenis"> <label for="ietenis">Tênis</label> <br>
+            <input type="checkbox" name="evolei" id="ievolei"> <label for="ievolei">Vôlei</label> <br>
+        </fieldset>
+
+        <p>
+            <!-- O 'submit' cria um botão para enviar o formulário. O 'value' define o texto do botão -->
+            <input type="submit" value="Enviar">
+            <!-- O 'reset' cria um botão para limpar o formulário. O 'value' define o texto do botão -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
