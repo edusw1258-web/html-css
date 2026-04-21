@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Media Feature</title>
+    <style>
+        /* Declarações gerrais */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #233eff;
+            /* Faz com que a imagem se adapte ao tamanho da tela, ocupando o tamnho totap da vp*/
+            background-size: contain;
+            /* Retira a repetição da imagem */
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: white;
+            /* Cria um sombreamento no texto */
+            text-shadow: 3px 3px 0px #111d77;
+            padding: 10px;
+        }
+
+        /* Declarações verticais */
+        @media screen and (orientation: portrait) {
+            body {
+                background-image: url(../imagens/cev-portrait.jpg);
+                background-position: center bottom;
+            }
+        }
+
+        /* Declarações horizontais */
+        @media screen and (orientation: landscape) {
+            body {
+                background-image: url(../imagens/cev-landscape.jpg);
+                background-position: left bottom;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mude a orientação do seu dispositivo</h1>
+</body>
+</html>
