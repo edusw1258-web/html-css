@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form method="get" autocomplete="on">
+        <p>
+            <label for="iano">Ano de Nascimento: </label>
+            <!-- Quando o 'input' for acionado, a função 'calcIdade()' será executada -->
+            <input type="number" name="ano" id="iano" min="1900" max="2026" oninput="calcIdade()">
+        </p>
+
+        <p>
+            <label for="iidade">Sua idade é: </label>
+            <output id="iidade">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+        <!-- A tag 'script' serve para adicionar scripts JS no HTML -->
+        <script>
+            function calcIdade() {
+                // O 'let' permite criar uma variável local
+                // O método 'getFullYear()' retorna o ano atual com 4 dígitos
+                let atual = new Date().getFullYear()
+                // O elemento 'iidade' irá receber o resultado da subtração entre o ano atual e o ano de nascimento 
+                // O 'Number()' converte o valor para número, caso seja string
+                iidade.innerHTML = Number(atual) - Number(iano.value)
+            }
+        </script>
+    </form>
+</body>
+</html>
