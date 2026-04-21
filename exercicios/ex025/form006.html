@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <!-- O 'label' faz o vinculo entre o texto e o 'input'-->
+            <!-- O 'for' do 'label' deve conter o 'id' do 'input' -->
+            <label for="icor">Cor: </label>
+            <!-- O 'type="color"' cria um campo para selecionar uma cor -->
+            <!-- O 'value' permite definir a cor inicial do campo -->
+            <input type="color" name="color" id="icor" value="#00ff00">
+        </p>
+
+        <p>
+            <label for="inivel">Nível de Satisfação: </label>
+            <!-- O 'type="range"' cria um campo para selecionar um valor numérico dentro de um intervalo -->
+            <!-- O 'min' e 'max' define o intervalo de valores aceitos pelo campo e o 'value' define o valor inicial do campo -->
+            <input type="range" name="nivel" id="inivel" min="0" max="10" min="1" max="10" value="2">
+        </p>
+
+        <p>
+            <label for="ifoto">Foto do Perfil: </label> 
+            <!-- O 'type="file"' cria um campo para selecionar um arquivo do computador -->
+            <!-- O 'type="file"' exige que o método de envio do formulário seja 'post' -->
+            <input type="file" name="foto" id="ifoto">
+        </p>
+
+        <p>
+            <!-- O 'submit' cria um botão para enviar o formulário. O 'value' define o texto do botão -->
+            <input type="submit" value="Enviar">
+            <!-- O 'reset' cria um botão para limpar o formulário. O 'value' define o texto do botão -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários em HTML</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado: </label>
+
+            <!-- O 'select' cria um campo para selecionar uma opção de uma lista de opções -->
+            <select name="estado" id="iest">
+
+                <!-- A tag 'option' é usada para criar as várias opções do 'select' -->
+                <option value="" selected>--- Escolha ---</option>
+
+                <!-- A tag 'optgroup' serve para agrupar as opções de um 'select' -->
+                <optgroup label="Região Sudeste">
+                    <!--  A tag 'option' é usada para criar as várias opções do 'select' -->
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Sul">
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PR">Paraná</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="BA">Bahia</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="CE">Ceará</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PB">Paraiba</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="PI">Piauí</option>
+                    <option value="MA">Maranhão</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <!-- O 'label' faz o vinculo entre o texto e o 'input'. O 'for' do 'label' deve conter o 'id' do 'input' -->
+            <label for="iprof">Profissão: </label>
+            <!-- O 'input' permite criar coisas para o usuário interagir com o formlulário -->
+            <!-- Para que as opções do 'datalist' sejam exibidas, o 'input' deve ter o atributo 'list' com o 'id' de 'datalist' -->
+            <input type="text" name="profissao" id="iprof" list="lstprof">
+            <!-- O 'datalist' cria uma lista de opções para o 'input' -->
+            <datalist id="lstprof">
+                <option>Administrador</option>
+                <option>Engenheiro</option>
+                <option>Médico</option>
+                <!-- O 'value' também será exibido na lista de opções -->
+                <option value="DEV">Desenvolvedor</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imsg">Mensagem: </label><br>
+            <!-- O 'textarea' cria um campo para o usuário escrever uma mensagem -->
+            <!-- O 'cols' define o comprimento da caixa de texto e o 'rows' define a altura da caixa de texto -->
+            <!-- Utilize o 'method="post"' quando tiver uma 'textarea' no documento -->
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+        </p>
+
+        <p>
+            <!-- O 'submit' cria um botão para enviar o formulário. O 'value' define o texto do botão -->
+            <input type="submit" value="Enviar">
+            <!-- O 'reset' cria um botão para limpar o formulário. O 'value' define o texto do botão -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
