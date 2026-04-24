@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* Versão Mobile First */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    /* Faz com que os elementos sejam calculados sem considerar 'border' e 'padding'. */
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    background: black url(../imagens/back-phone.jpg) no-repeat;
+    /* O 'cover' faz com que a imagem ocupe toda vp */
+    background-size: cover;
+    /* Posiciona a imagem a partir do centro da vp */
+    background-position: center center;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.329);
+    width: 80vw;
+    /* Centraliza o elemento na tela */
+    margin: auto;
+    margin-top: 20px
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    /* Adiciona um sombreamento no texto */
+    text-shadow: 2px 2px 2px black;
+}
+
+/* Faz com que a imagem seja centralizada e torne a aparece na tela */
+img {
+    display: block;
+    margin: auto;
+}
+
+/* O 'none' faz com que o elemento seja escondido */
+img#phone { display: block;}
+img#tablet { display: none;}
+img#print { display: none;}
+img#pc { display: none;}
+img#tv { display: none;}
+

@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* Co*/
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body, html {
+    background-color: darkgray;
+}
+
+header {
+    background-color: gray;
+}
+
+header > h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Configurações para o icone do menu */ 
+#burger {
+    background-color: rgba(0, 0, 0, 0.863);
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    /* Adiciona um cursor de ponteiro */
+    cursor: pointer;
+}
+
+/* Pseudo-classe que altera o estado quando se passar o mouse por cima do icone */
+#burger:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+menu {
+    display: none;
+}
+
+menu > ul {
+    /* Remove i ícone das bolinhas da lista */
+    list-style-type: none;
+}
+
+/* Parte referente a cada link dentro do menu*/
+menu > ul > li > a {
+    display: block;
+    padding: 10px;
+    /* Remove o sublinhado do link */
+    text-decoration: none;
+    text-align: center;
+    background-color: rgba(20, 1, 1, 0.301);
+    color: white;
+    border-top: 2px solid gray;
+}
+
+/* Pseudo-classe que altera o estado quando se passar o mouse por cima do link*/
+menu > ul > li > a:hover {
+    background-color: gray;
+}
+
+main {
+    width: 90vw;
+    background-color: white;
+    /* Centraliza o elemento no centro da tela*/
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+article > h2 {
+    padding-bottom: 20px;
+
+}
+
+article > p {
+    /* ALinha cada parágrafo de forma justificada */
+    text-align: justify;
+    margin-top: 20px;
+    text-indent: 20px;
+}

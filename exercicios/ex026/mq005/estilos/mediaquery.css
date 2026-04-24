@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* Configurações para telas grandes */
+
+/* Typical Device Breakpoints 
+Celulares pequenos: até 480px
+Celulares: até 768px
+Tablets: 768px - 1024px
+Desktops: 1024px - 1280px
+Grandes telas: + de 1280px 
+ */
+
+ /* Versão para telas grandes (acima de 768px) */
+ /* Apenas o menu será exibido fixamente. As opções do menu serão exibidas conforme o tamanho da tela */
+@media screen and (min-width: 769px) {
+    #burger {
+        /* Faz com que o ícone do menu seja ocultado */
+        display: none;
+    }
+
+    menu {
+        /* Faz com que o menu seja exibido */
+        display: block;
+    }
+
+    menu > ul > li {
+        /* Faz com que os itens do menu sejam exibidos um ao lado do outro */
+        display: inline-block;
+    }
+
+    main {
+        /* Em telas muito grandes, para evitar linhas longas, a largura do 'main' será limitada até 768px, o que facilitaria a leitura*/
+        width: 768px;
+    }
+}
