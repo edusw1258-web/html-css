@@ -5,39 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iframe em HTML</title>
     <style>
-        iframe {
-            width: 400px;
+        header {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header > h1 {
+            font-size: 2em;
+            color: rgb(255, 255, 255);
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header > p {
+            font-size: 0.8em;
+            color: rgb(255, 255, 255);
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+
+        body {
+            background-color: rgb(45, 36, 70);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tprin {
+            background-color: #23135caf;
+            border: 2px solid #6b07ec;
+            color: #ffffff67;
+            border-radius: 10px;
+            padding: 5px 20px;
+            margin: 20px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .card {
+            background-color: #000000;
+            border: 2px solid #6b07ec;
+            border-radius: 10px;
+            padding: 0px 20px 20px 20px;
+            margin: 20px;
+            width: 90%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cardhd {
+            background-color: #5e32fd49;
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        h1, p { 
+            text-align: center;
+            color: #fff9f967;
+        }
+        
+        .iframe {
+            width: 500px;
             height: 500px;
+            border: 4px solid #333;
+            border-radius: 20px;
+            margin: 0 auto; /* Centraliza horizontalmente a 'div.iframe' */
+            overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do 'div' */
+        }
+
+        iframe {
+            width: 100%; /* Faz com que o 'iframe' ocupe 100% da largura do elemento pai (div) */
+            height: 100%; /* Faz com que o 'iframe' ocupe 100% da altura do elemento pai (div) */
+            border: none;
+        }
+
+        footer {
+            margin-top:auto;
+        }
+
+        footer p {
+            font-style: italic;
+            opacity: 0.4;
         }
     </style>
 </head>
 <body>
-    <h1>Testando o uso de um iframe</h1>
+    <header>
+        <p>Curso de HTML5 e CSS3 - Curso em Vídeo</p>
+        <h1>Exercício 24 - Iframe em HTML</h1>
+    </header>
+    <main>
+        <div class="tprin">
+            <h1>Testando o uso de um iframe</h1>
+        </div>
+        <div class="card">
+            <!-- Método 1 usando o 'a' (anchor) -->
+            <div class="cardhd">
+                <p>Acesando o site do <a href="www.cursoemvideo.com" target="_blank">Curso em Vídeo</a> para aprender a programar.</p>
+            </div>
 
-    <!-- Método 1 usando o 'a' (anchor) -->
-    <p>Aceesando o site do <a href="www.cursoemvideo.com" target="_blank">Curso em Vídeo</a> para aprender a programar.</p>
+            <!-- Método 2 usando 'iframe' -->
+               <!-- O 'iframe' será a primeira opção do endereço do site -->
+               <!-- Caso o 'iframe' não funcione, podemos usar o 'a' que aponta para o mesmo endereço-->
+                <!-- O tamanho padrão de um 'iframe' é de 300x150px -->
+            <div class="iframe">
+                <iframe src="https://www.cursoemvideo.com">
+                    <a href="https://www.cursoemvideo.com" target="_blank"></a>
+                </iframe>
+            </div>
+        </div>
 
-    <!-- Método 2 usando 'iframe' -->
-    <p>
-        Acessando o site do 
-       <!-- O 'iframe' será a primeira opção do endereço do site -->
-       <!-- Caso o 'iframe' não funcione, podemos usar o 'a' que aponta para o mesmo endereço-->
-        <!-- O tamanho padrão de um 'iframe' é de 300x150px -->
-        <iframe src="https://www.cursoemvideo.com" frameborder="0" height="500" width="400">
-            <a href="https://www.cursoemvideo.com" target="_blank"></a>
-        </iframe>
+        <br>
+        
+        <div class="card">
+            <div class="cardhd">
+                <p>Acesse o repositório do professor Gustavo Guanabara no</p>
+            </div>
 
-
-        para aprender a programar.
-    </p>
-
-    <br>
-
-    <p>
-        Acesse o repositório do professor Gustavo Guanabara no 
-        <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="400" width="200">
-            <a href="https://gustavoguanabara.github.io" target="_blank">GitHub</a>
-        </iframe>
-    </p>
+            <div class="iframe">
+                <iframe src="https://gustavoguanabara.github.io">
+                     <a href="https://gustavoguanabara.github.io" target="_blank">GitHub</a>
+                </iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

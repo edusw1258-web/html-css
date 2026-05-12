@@ -8,6 +8,9 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         table {
@@ -30,15 +33,25 @@
             background-color: lightgray;
         }
 
-        /* Adiciona uma rolagem lateral caso a tabela seja maior que a tela*/
+        /* Adiciona uma rolagem lateral caso a tabela seja maior que a tela */
         div#container {
             overflow-x: auto;
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+        }
+
+        footer p {
+            font-style: italic;
+            opacity: 0.3;
         }
     </style>
 </head>
 <body>
     <h1>Criando Tabelas Responsivas em HTML</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi aliquam sapiente dolorum esse, cumque molestias dicta aliquid, natus amet tenetur sit quibusdam quis! Quibusdam blanditiis modi, adipisci veniam doloremque eos.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi aliquam sapiente dolorum esse, cumque molestias dicta aliquid, natus amet tenetur sit quibusdam quis! Quibusdam blanditiis modi, adipisci veniam doloremque eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, consequuntur facere porro sapiente in nisi ex culpa vero tempore mollitia nostrum, adipisci sed impedit suscipit enim assumenda velit vitae! Nemo!</p>
     <div id="container">
         <table>
             <caption>Tabelas Responsivas</caption>
@@ -152,5 +165,8 @@
             </tbody>
         </table>
     </div>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

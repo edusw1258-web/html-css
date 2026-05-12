@@ -6,49 +6,112 @@
     <title>Meu primeiro exercício</title>
     <link rel="shortcut icon" href="icon/favicon-32x32.png" type="image/x-icon">
     <style>
-
         body {
             font-family: Arial, sans-serif; 
-            background-color: #f0f0f0;
+            background-color: #9496ec;
             margin: 20px; /* Espaçamento ao redor do conteúdo */
             padding: 20px; /* Espaçamento entre o conteúdo e a margem*/
-            min-height: 100vh; /* Garante que o 'body' ocupe toda a altura da viewport, sem ele isso o 'footer' estaria logo após o conteúdo */
             display: flex; /* Permite ontrolar o posicionameto dos elementos, nesse caso, os filhos de 'body' ('img', 'main' e 'footer'), */
             flex-direction: column; /* Organiza os elementos verticalmente. Precisa do 'display: flex' */
+            min-height: 100vh; /* Garante que o 'body' ocupe toda a altura da viewport, sem ele isso o 'footer' estaria logo após o conteúdo */
+            align-items: center; /* Centraliza os elementos filhos horizontalmente */
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 10px 0px 10px;
+            
+        }
+
+        header h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 28px;
+            color: #333;
+            margin: 0px;
+        }
+
+        header p {
+            font-size: 14px;
+            color: #555;
+            margin: 0px 0px 60px 0px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        main {
+            background-color: aliceblue;
+            max-width: 700px;
+            width: 90%;
+            padding: 25px;
+            display: flex;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.459);
+            gap: 20px; /* Espaçamento entre os elementos filhos */
+            align-items: center;
+            transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom */
+        }
+
+        /* Faz com que o 'main' tenha um pequeno efeito de zoom ao passar o mouse por cima */
+        main:hover {
+            transform: scale(1.02);
+        }
+
+        main img {
+            width: 120px;
+        }
+
+        .conteiner {
+            flex: 1;
+        }
+
+        .conteiner h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .conteiner p {
+            color: #555;
+            line-height: 1.5; 
         }
 
         p {
             color: #797575;
             line-height: 1.6; /* Melhorar a legibilidade do texto, deixando um maior espaçamento entre linhas e letras */
-            overflow: hidden; /* Garantir que o texto não vaze para a área da imagem, alinhando o texto a direita. Vai afetar somente o primeiro 'p', caso queiramos que todos os parágrafos sejam afetados, envelopar os 'p' dentro de uma 'main' */
+            overflow: hidden; /* Faz que que os contéudos não invadam o espaço em baixo da imagem. Alinhando o texto no sentido oposto da imagem. O conteúdo que transpassar a altura da imagem será exbido em baixo dela, para alinhar todo o contéudo é nessário envelopá-lo dentro de uma 'div' */
         }
 
         img {
             float: left; /* Faz com que a imagem fique a esquerda e o texto a direita, sem um invadir o espaço do outro */
-            width: 180px; /* Muda o tamanho da imagem */
-            margin: 0 20px 10px 0; /* Espaçamento entre a imagem e o texto */
+            width: 180px; /* Altera a largura da imagem */
+            margin: 0 20px 10px 0; /* Espaçamento entre a imagem e o texto. 2 valores se referem aos eixos vertical e horizontal. 4 valores se referem as 4 medidas: top, right, bottom, left */
         }
 
         footer {
-            margin-top: auto; /* ocupa todo o espaçamento vazio entre o 'footer' e o 'main', precisa do 'min-height:100vh', 'display:flex' e 'flex-direction:column para funcionar */
+            margin: auto 0px 0px 0px; /* ocupa todo o espaçamento vazio entre o 'footer' e o 'main', precisa do 'min-height:100vh', 'display:flex' e 'flex-direction:column para funcionar */
             text-align: center; 
         }
 
         footer p {
+            margin: 0px;
             font-style: italic;
             color: #777;
             font-size: 14px;
         }
-
     </style>
 </head>
 <body>
+    <header>
+        <h1>Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
+        <p>Exercício 001 - Hello, World!</p>
+    </header>
     <main> 
         <img src="imagens/HTML5_Logo_512 (1).png" alt="Logo HTML5">
-        <h1>Olá, mundo!</h1>
-        <hr>
-        <p>Estou muito feliz em estar editando meu primeiro documento HTML!</p>
-        <p>Um momento único! Estou criando meu primeiro site.</p>
+        <div class="conteiner">
+            <h2>Olá, mundo!</h2>
+            <hr>
+            <p>Estou muito feliz em estar editando meu primeiro documento HTML!</p>
+            <p>Um momento único! Estou criando meu primeiro site.</p>
+        </div>
     </main>
     <footer>
         <p>&copy; Gabriel Eduardo</p>  

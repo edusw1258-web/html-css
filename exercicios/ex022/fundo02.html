@@ -7,26 +7,46 @@
     <link rel="shortcut icon" href="imagens/icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
         body {
-            margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 10px;
+            min-height: 100vh;
+            
         }
 
         h1 {
             margin-bottom: 30px;
         }
 
-        img#center {
-            width: 5000px;
-            height: 5000px;
+        div {
+            width: 90%;
+            display: block;
+            text-align: center;
+        }
+
+        img.center {
             height: auto;
+            border: 10px solid rgb(131, 131, 131);
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: auto;
+            text-align: center;
+            font-style: italic;
+            color: rgb(107, 104, 104);
         }
     </style>
 </head>
 <body>
     <h1>Testando imagem de fundo em sites</h1>
-    <img class="center" src="https://wallpapers.com/images/featured/imagens-muito-legais-40it5k0y58kfe71d.jpg" alt="imagem de fundo">
+    <div><img class="center" src="https://wallpapers.com/images/featured/imagens-muito-legais-40it5k0y58kfe71d.jpg" alt="imagem de fundo"></div>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

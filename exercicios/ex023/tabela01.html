@@ -8,6 +8,9 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         table {
@@ -19,13 +22,25 @@
         td {
             border: 1px solid black; /* Cria uma borda*/
             padding: 8px;
-            text-align: center; /* Alinhamento horizontal */
-            vertical-align: top; /* Alinhamento vertical */
+            text-align: center; /* Alinhamento horizontal dos dados */
+            vertical-align: top; /* Alinhamento vertical dos dados */
         }
 
         /* Alinha o texto à direita */
         .numero {
             text-align: right;
+        }
+
+        footer {
+            margin: auto;
+            text-align: center;
+        }
+
+        footer p {
+            margin-top: 350px;
+            font-size: 14px;
+            font-style: italic;
+            color: #555;
         }
     </style>
 </head>
@@ -63,5 +78,8 @@
             <td>C4</td>
         </tr>
     </table>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

@@ -16,15 +16,21 @@
             margin: 0; /* Remove as margens */
         }
 
-        /* Ajustes da div que contém os videos */
-        div { 
-            display: flex; /* Permite controlar o posicionameto dos elementos */
-            flex-direction: column; /* Centraliza verticalmente */
-            align-items: center; /* Centraliza horizontalmente */
-            gap: 20px; /* Espaçamento entre os vídeos */
-            width: 100%; /* Faz com que a 'div' ocupe 100% da vw */
+        h1 {
+            text-align: center;
+            color: rgb(0, 0, 0);
         }
 
+        /* Ajustes da div que contém os videos */
+        div { 
+            display: flex; /* Permite organizar o posicionameto dos elementos */
+            flex-direction: column; /* Centraliza verticalmente */
+            width: 100%; /* Faz com que a 'div' ocupe 100% da vw */
+            align-items: center; /* Centraliza horizontalmente */
+            gap: 20px; /* Espaçamento entre os vídeos */
+        }
+
+        /* Seleciona somenete a tag 'video' dentro de uma 'div' */
         div > video {
             border: 3px solid rgb(100, 80, 140);
             border-radius: 8px;
@@ -33,6 +39,7 @@
         footer {
             text-align: center;
             margin-top: auto;
+            padding-top: 40px;
         }
         
         footer p {

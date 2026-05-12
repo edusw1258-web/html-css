@@ -171,7 +171,7 @@ a.externo::after {
     content: '\00A0\1F517';
 }
 
-/* Precismaos envelopar 'video' em uma 'div' para poder personalizar conforme com a página*/
+/* Precismaos envelopar 'video' em uma 'div' para poder personalizar conforme a página */
 div.video {
    background-color: var(--cor1);
    margin: -0px -20px 30px;
@@ -185,8 +185,8 @@ div.video > iframe {
     position: absolute; /* Se posicona dentro da 'div' de acordo com sua referência que é 'position:relative' */
     top: 5%; /* Afasta o inframe das bordas*/
     left: 5%; /* Afasta o inframe das bordas*/
-    width: 90%; /* Ocupa 90% da div, deixando uma margem de 5% */
-    height: 90%; /* Ocupa 90% da div, deixando uma margem de 5% */
+    width: 90%; /* Ocupa 90% da largura da div, deixando uma margem de 5% */
+    height: 90%; /* Ocupa 90% da div da altura da div, deixando uma margem de 5% */
 }
 
 /* Configuração de toda a tag 'aside' */

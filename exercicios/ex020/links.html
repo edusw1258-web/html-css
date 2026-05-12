@@ -16,37 +16,42 @@
         }
 
         a {
-            color: #000000; /* Cor não aparece porque foi sobrescrita pela cor da  'a:visited' */
+            color: #f5f5f5; /* Cor não aparece porque foi sobrescrita pela cor da  'a:visited' */
             text-decoration: none; /* Remove o sublinhado e qualquer outra decoração do link*/
-            font-weight: bold;
+            font-weight: bold; /* Negrito */
         }
 
-        
-        a:visited { /* Pseudo-classe que muda a cor da fonte se o site já foi visitado */
-            color: rgb(214, 3, 3)
+        /* Pseudo-classe que muda a cor da fonte se o site já foi visitado */
+        a:visited { 
+            color: rgb(252, 216, 16)
         }
         
-        a:hover { /* Pseudo-classe que muda a cor da fonte quando o mouse passa por cima do link */
+        /* Pseudo-classe que muda a cor da fonte quando o mouse passa por cima do link */
+        a:hover { 
             color: rgb(116, 116, 116);
             text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse por cima do link */
         }
         
-        a:active { /* Pseudo-classe que muda a cor quando o link é clicado */
-            color: rgb(255, 251, 5);
+        /* Pseudo-classe que muda a cor quando o link é clicado */
+        a:active { 
+            color: rgb(255, 15, 183);
         }
 
-        .especial { /* Seleciona o link com a classe "especial" */
-            background-color: rgb(0, 0, 0); /* Muda a cor de fundo do link com a classe "especial" */
+        /* Seleciona o link com a classe "especial" */
+        .especial { 
+            background-color: rgb(0, 0, 0); /* Muda a cor de fundo */
         }
         
-        a::after { /* Pseudo-elemento que adiciona um conteúdo depois do link */
-            content: '[link]'; /* Adiciona conteudo depois do link. Nesse caso, o conteúdo será "[link]" */
+        /* Pseudo-elemento que adiciona um conteúdo depois do link */
+        a::after { 
+            content: '[link]'; /* Conteúdo que será adicionado depois do link. O conteúdo é "[link]" */
             text-decoration: none; /* Remove o sublinhado e qualquer outra decoração do link */
             font-weight: normal;
             color: rgb(245, 39, 2);
         }    
         
-        .especial::after { /* Pseudo-elemento que adiciona um conteúdo depois do link com a classe "especial" */
+        /* Pseudo-elemento que adiciona um conteúdo depois do link com a classe "especial" */
+        .especial::after { 
             content: '[link]'; /* Adiciona conteudo depois do link. Nesse caso, o conteúdo será "[link especial]" */
             text-decoration: none; /* Remove o sublinhado e qualquer outra decoração do link */
             font-weight: normal;

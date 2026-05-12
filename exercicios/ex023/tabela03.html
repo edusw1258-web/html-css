@@ -6,8 +6,11 @@
     <title>Tabelas em HTML</title>
     <link rel="shortcut icon" href="icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
-        Body {
+        body {
             font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         table {
@@ -20,6 +23,16 @@
             padding: 10px;
             text-align: center;
         }
+
+        footer {
+            margin: auto 0px 0px 0px;
+            text-align: center;
+        }
+
+        footer p {
+            font-style: italic;
+            opacity: 0.3;
+        }
     </style>
 </head>
 <body>
@@ -27,12 +40,12 @@
     <table>
         <tr>
             <td>A</td>
-            <td colspan="2">B</td> /* 'colspan' é usado para mesclar células horizontalmente */
+            <td colspan="2">B</td> <!--'colspan' é usado para mesclar células horizontalmente -->
         </tr>
         <tr>
             <td>D</td>
             <td>E</td>
-            <td rowspan="3">F</td> /* 'rowspan' é usado para mesclar células verticalmente */
+            <td rowspan="3">F</td> <!-- 'rowspan' é usado para mesclar células verticalmente -->
         </tr>
         <tr>
             <td>G</td>
@@ -43,5 +56,8 @@
             <td>L</td>
         </tr>
     </table>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

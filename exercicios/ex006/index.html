@@ -6,24 +6,27 @@
     <link rel="shortcut icon" href="html.ico" type="image/x-icon">
     <title>Hierarquia entre Títulos</title>
     <style>
-
         body {
-            background-color: black;
+            background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(191, 192, 171));
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: purple;
             min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport, ou seja, a tela inteira */
-            display: flex; /* Permite controlar o posicionameto dos elementos ('main', 'div', 'footer', etc.) */
+            display: flex; /* Permite organizar o posicionameto dos elementos ('main', 'div', 'footer', etc.) */
             flex-direction: column; /* Organiza os elementos verticalmente. Precisa do 'display: flex' */
         }
 
-        h2 {
-            color: orange;
-            font-family: 'Times New Roman', Times, serif;
+        header {
+            text-align: center;
+            margin-bottom: 80px;
         }
 
-        h3 {
-            color: yellow;
-            font-family: 'Courier New', Courier, monospace;
+        main {
+            background-image: linear-gradient(to bottom, rgb(255, 253, 133), rgb(234, 238, 203));
+            margin: auto; /* Centraliza o main horizontalmente */
+            max-width: fit-content; /* Faz com a caixa se adapte ao tamanho do conteúdo */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.459);
         }
 
         footer {
@@ -32,25 +35,32 @@
         }
         
         footer p {
-            margin: 0;
+            margin-top: 50px;
             font-style: italic;
             font-size: 14px;
-            color: gray;
         }
-        
     </style>
 </head>
 <body>
-    <h1>Sistemas de Comunicação Espacial</h1>
-    <h2>Como funcionam?</h2>
-    <h3>Principais meios de comunicação</h2>
-    <h3>Meio de comunicação entre sistemas</h3>
-    <h3>Meios de comunicaçaõ interestelar</h3>
-    <h1>Os Postos Espaciais Pela Via Láctea</h1>
-    <h2>Mapa dos postos</h2>
-    <h3>Postos de sistemas</h3>
-    <h3>Postos interstelares</h3>
-    <h3>Postos de geolocalização</h3>
+    <header>
+        <h1>Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
+        <p>Exercício 006 - Títulos e subtítulos</p>
+    </header>
+    <main>
+        <div>Títulos e subtítulos usando as tags de &lt;h1&gt; a &lt;h6&gt;</div>
+        <h1>&lt;h1&gt; - Título principal</h1>
+        <p>Utilizamos a tag &lt;h1&gt; para títulos principais que se referem a página inteira. O ideal é ter apenas um &lt;h1&gt; por pagina ou por seção.(header, main, footer).</p>
+        <h2>&lt;h2&gt; - Título de seção</h2>
+        <p>Utilizamos a tag &lt;h2&gt; para títulos de seções dentro de uma mesma página ou como subtítulos. de &lt;h1&gt;.</p>
+        <h3>&lt;h3&gt; - Título de artigo</h3>
+        <p>Utilizamos a tag &lt;h3&gt; para títulos de artigos e temas ou como subtítulos de &lt;h2&gt;.</p>
+        <h4>&lt;h4&gt; - Título de subtítulo</h4>
+        <p>Podemos ainda utlizar as tags de &lt;h4&gt; a &lt;h6&gt; para subtítulos das tags anteriores.</p>
+        <h5>&lt;h5&gt; - Título de subsubtítulo</h5>
+        <p>Podemos ainda utlizar as tags de &lt;h5&gt; a &lt;h6&gt; para subtítulos das tags anteriores.</p>
+        <h6>&lt;h6&gt; - Título de subsubsubtítulo</h6>
+        <p>Podemos ainda utlizar as tags de &lt;h6&gt; para subtítulos das tags anteriores.</p>
+    </main>
     <footer>
         <p>&copy; Gabriel Eduardo</p>
     </footer>

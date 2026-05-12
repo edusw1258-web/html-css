@@ -6,8 +6,14 @@
     <title>Alinhamento Vertical e Horizontal</title>
     <link rel="shortcut icon" href="imagens/icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
         #container {
-            background-image: url(imagens/target001.png);
+            background-image: url(imagens/target001.png); /* Linhas da área roxa */
             background-size: 100% 100%; /* Faz com que a imagem ocupe toda a tela. Usado para que a imagem não se repita */
             height: 94vh; /* Ocupará 94% da altura da tela */
             padding: 10px;
@@ -24,11 +30,24 @@
             position: absolute; /* Se alinha conforme o 'position relative'. Se não tiver um 'position: relative' ele alinha com 'body' ou o viewport */
 
             /* Se alinha conforme o fuxo da página. Por padrão, o alinhamento começa no canto superior esquerdo deste conteiner. Ou seja, este lado é que estará no centro do alinhamento */
-            top: 50%; /* Alinhamento vertical da caixa. Precisa do 'left' e 'transform' */
-            left: 50%; /* Alinhamento horizontal da caixa. Precisa do 'top' e 'transform' */
+            /* 'top' e 'left' se movem de acordo com as proporções do elemento 'pai' */
+            top: 50%; /* Alinhamento vertical da caixa, move 50% para baixo. Precisa do 'left' e 'transform' */
+            left: 50%; /* Alinhamento horizontal da caixa, move 50% para a direita. Precisa do 'top' e 'transform' */
 
             /* Ajusta o alinhamento ao centro da página. Essa parte complementa o 'top' e 'left'. Posições negativas se movem para cima e para a esquerda e posições positivas se movem para baixo e para a direita */
+            /* 'transform' se move de acordo com as proporções de si mesma */
             transform: translate(-50%, -50%); /* Corrige o posicionamento, centralizando a caixa */
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        footer p {
+            font-style: italic;
+            color: rgba(0, 0, 0, 0.295);
         }
     </style>
 </head>
@@ -38,5 +57,8 @@
 
         </article>
     </section>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

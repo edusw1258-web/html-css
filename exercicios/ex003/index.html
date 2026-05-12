@@ -6,64 +6,104 @@
     <title>Teste com imagens</title>
     <link rel="shortcut icon" href="icon/favicon-32x32.png" type="image/x-icon">
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
 
         body {
             font: 1em sans-serif;
-            background-color: rgb(162, 165, 4);
+            background-color: rgb(218, 218, 218);
             text-align: center;
-        }
-
-        h1 {
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        p {
-            color: rgb(121, 58, 58);
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        .logohtml {
-            display: flex; /* Permite ontrolar o posicionameto dos elementos ('main', 'div', 'footer', etc.) */
-            margin: 10px auto;
-        }
-
-        .logocss {
             display: flex;
-            margin: 10px auto;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        .logojs {
+        header {
+            text-align: center;
+            margin: 0px 0px 80px 0px;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin-bottom: 0;
+        }
+
+        header p {
+            font-size: 14px;
+            color: #555;    
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        main {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+
+            display: grid; /* Faz com que os elementos sejam organizados em grade (linhas e colunas) */
+            grid-template-columns: repeat(3, 1fr); /* Divide o body em 3 colunas iguais (1fr) */
+            gap: 20px; /* Espaçamento entre os elementos da grade */
+        }
+
+        .card {
+            background: #b6b6b6;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
             display: flex;
-            margin: 50px auto;
-            width: 300px;
-            height: auto;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.2s;
         }
 
-        footer p {
-            color: white;
-            font-size: 0.8em;
+
+        /* Aumenta o tamanho do card ao passar o mouse por cima */
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        footer {
             margin-top: auto;
         }
         
         footer p {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-style: italic;
-
+            opacity: 0.5;
         }
-
     </style>
 </head>
 <body>
-    <h1>Testando carga e imagens</h1>
-    <p>Abaixo você verá uma imagem:</p>
-    <img class="logohtml" src="imagens/logohtml200.png" alt="Logo HTML5"><br><hr>
-    <p>Podemos também carregar imagens que estão em sub-pastas</p>
-    <img class="logocss" src="logocss3200.jpg" alt="Logo CSS3"><br><hr>
-    <p>Também podemos carregar imagens externas</p>
-    <img class="logojs" src="https://brandlogovector.com/wp-content/uploads/2020/07/JavaScript-Logo-Small.png" alt="Logo JavaScript"><br>
+    <header>
+        <h1>Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
+        <p>Exercício 003 - Imagens em HTML</p>
+    </header>
+    <main>
+        <div class="card">
+            <img class="logohtml" src="imagens/logohtml200.png" alt="Logo HTML5">
+            <p>Imagem local (HTML5)</p>
+        </div>
+
+        <div class="card">
+            <img class="logocss" src="imagens/cssnw2.png" alt="Logo CSS3">
+            <p>Imagem local (CSS3)</p>
+        </div>
+
+        <div class="card">
+            <img class="logojs" src="https://brandlogovector.com/wp-content/uploads/2020/07/JavaScript-Logo-Small.png" alt="Logo JavaScript">
+            <p>Imagem externa (JavaScript)</p>
+        </div>
+    </main>
     <footer>
-        <p>&copy; Gabriel Edaurdo</p>
+        <p>&copy; Gabriel Eduardo</p>
     </footer>
 </body>
 </html> 

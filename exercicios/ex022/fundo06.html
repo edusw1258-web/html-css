@@ -7,19 +7,21 @@
     <link rel="shortcut icon" href="imagens/icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             height: 100vh;
             /* background individuais (opção 1) */
             background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
             background-position: center center; /* Centraliza a imagem. */
             background-repeat: no-repeat; /* Não repete a imagem. Nesse caso, só irá aparecer a imagem na posição que foi definida. */
-            background-size: cover; /* Faz com que a imagem ocupe toda a tela mas suas bordas são removidas ao depender do tamanho da tela */
+            background-size: cover; /* Faz com que a imagem ocupe toda o conteiner, mantendo a proporcionalidade */
             background-attachment: fixed; /* Faz com que a imagem fique estática na página. Não será afetada pelo scroll */
 
             /* shorthand background (opção 2) */
             /* background: color > image > position > repeat > size > attachment */
             background: black url(imagens/wallpaper002.jpg) center center no-repeat cover fixed;
-
         }
 
         main {
@@ -29,6 +31,29 @@
             margin: auto;
             border: 1px solid darkgreen;
             border-radius: 15px;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            margin: 40px 0px;
+        }
+
+        p {
+            margin: 20px 0px;
+            text-indent: 30px;
+            line-height: 1.5em;
+        }
+
+        footer {
+            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-style: italic;
+            color: rgba(250, 250, 250, 0.295);
         }
     </style>
 </head>
@@ -49,5 +74,8 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ad numquam quisquam, minus ipsam temporibus recusandae tenetur quibusdam debitis accusamus perspiciatis quia? Illum eum laudantium, accusantium dolorum odit consectetur illo!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi necessitatibus cum eaque animi praesentium itaque eum quam nulla nemo sapiente a, eius dolores quos soluta voluptatum rem. Sapiente, repudiandae nihil!</p>
     </main>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

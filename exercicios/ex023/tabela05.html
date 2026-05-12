@@ -8,6 +8,9 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         table {
@@ -33,6 +36,16 @@
         col.cgroup {
             background-color: lightgreen;
         }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+        }
+
+        footer p {
+            font-style: italic;
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
@@ -43,8 +56,8 @@
 
         <!-- A tag 'colgroup' permite referenciar um conjunto de colunas -->
         <colgroup>
-            <col class="cname">
-            <col class="cgroup" span="2">
+            <col class="cname"> <!-- Coluna em vermelho -->
+            <col class="cgroup" span="2"> <!-- Grupo de colunas em verde -->
         </colgroup>
 
         <tr>
@@ -96,5 +109,8 @@
             <td>Ator</td>
         </tr>
     </table>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

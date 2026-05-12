@@ -8,6 +8,9 @@
     <style> 
         body {
             background-image: url('imagens/wallpaper001.jpg');
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Definições gerais para todas div's com a class 'q' */
@@ -15,7 +18,7 @@
             border: 10px solid black; /* Adiciona uma borda preta */
             width: 300px; /* Largura da 'div' */
             height: 300px; /* Altura da 'div' */
-            display: inline-block; /* Põe as 'div' lado a lado na horizontal */
+            display: inline-block; /* Permite por as 'div' lado a lado na horizontal */
             border-radius: 10px; /* Adiciona cantos arredondados */
             background-color: lightgray;
         }
@@ -34,19 +37,27 @@
         #q3 {
             background-image: url('imagens/pattern003.png');
         }
+
+        footer {
+            text-align: center;
+        }
+
+        footer > p {
+            margin: auto; /* Necessário para reduzir o altura da caixa */
+        }
     </style>
 </head>
 <body>
-    <div class="quadrado" id="q1">
-        
+    <div>
+        <div class="quadrado" id="q1">
+        </div>
+        <div class="quadrado" id="q2">
+        </div>
+        <div class="quadrado" id="q3">
+        </div>
     </div>
-
-    <div class="quadrado" id="q2">
-
-    </div>
-
-    <div class="quadrado" id="q3">
-
-    </div>
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
 </body>
 </html>

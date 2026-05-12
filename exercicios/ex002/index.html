@@ -6,19 +6,54 @@
     <title>Parágrafos</title>
     <link rel="shortcut icon" href="icon/favicon-32x32.png" type="image/x-icon">
     <style>
-
         body {
             font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
             font-size: 20px;
             font-weight: lighter; /* Peso da fonte. Deixa mais ou menos grossa/escura */
-            background-color: rgb(89, 179, 179);
+            background-color: rgba(0, 0, 0, 0.199);
             min-height: 100vh; /* Garante que o corpo ocupe toda a altura da viewport */
             display: flex; /* Permite ontrolar o posicionameto dos elementos, nesse caso, os filhos de 'body' ('img', 'main' e 'footer'), */
             flex-direction: column; /* Alinha os elementos verticalmente, precisa do 'display: flex' */
         }
 
-        h1 {
+        header {
+            padding: 20px;
             text-align: center;
+            border-bottom: 1px solid black;
+        }
+
+        header h1 {
+            font-size: 1.8em;
+            margin-bottom: 0;
+        }
+
+        header p {
+            font-size: 14px;
+            color: #555;   
+            margin: 0; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto; /* Centraliza o 'main' horizontalmente, o 'auto' é para as margens esquerda e direita, o '20px' é para a margem superior e inferior */
+            padding: 20px;
+            background-color: rgb(141, 141, 141);
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.459);
+        }
+
+        .box {
+            margin-top: 10px;
+            padding: 4px 10px;
+            border-radius: 5px;
+            background-color: rgb(83, 88, 88);
+        }
+
+        code {
+            background-color: rgb(83, 88, 88);
+            border-radius: 5px;
         }
 
         footer {
@@ -26,44 +61,44 @@
         }
 
         footer p {
-            background-color: gray;
             font-style: italic;
             text-align: center;
-            color: rgb(83, 88, 88);
             font-size: 14px;
+            opacity: 0.3;
         }
-
-        hr {
-            border-color: black;
-        }
-
     </style>
 </head>
 <body>
+    <header>
+        <h1>Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
+        <p>Exercício 002 - Parágrafos e quebras de linhas</p>
+    </header>
     <main>
-        <h1>Parágrafos e quebras de linhas</h1>
-        <hr>
-        <p>Um parágrafo pode ser escrito de qualquer forma, desde que tudo esteja entre as tags 'p' e '/p'</p>
-        <p>Se necessário quebrar um texto em algum lugar específico, usamos a tag 'br'.<br>
-        Para usarmos os símbolos de abertura de tag sem necessariamente abrir uma tag usamos &lt e &gt seguidos de ponto e vírgula. <br>Veja: <mark>& l t ;</mark> tudo aqui dentro está entre os símbolos de abertura e fechadura de tags, mas no formato escrito. <mark>& g t ;</mark></p>
-        <p>Vamos adicionar alguns símbolos especiais:
-            &copy;
-            &trade;
-            &reg;
-            &euro;
-            &dollar;
-            &pound;
-            &yen;
-            &Delta;
-            &Omega;
-        </p>
-        <p>Vamos adicionar alguns emojis:
-            &#x1F596;
-            &#x1F44D;
-            &#x1F44E;
-        </p>
-    </main>
+        <section>
+            <h2>Parágrafos</h2>
+            <p>Um parágrafo pode ser escrito de qualquer forma, desde que tudo esteja entre as tags <code>&lt;p&gt; e &lt;/p&gt;</code></p>
+        </section>
 
+        <section>
+            <h2>Quebras de linhas</h2>
+            <p>Se necessário quebrar um texto em algum lugar específico, usamos a tag <code>&lt;br&gt;</code>.<br>
+                Para usarmos os símbolos de abertura de tag sem necessariamente abrir uma tag usamos &lt e &gt seguidos de ponto e vírgula. <br>Veja: <code>&-l-t-;</code> tudo aqui dentro está entre os símbolos de abertura e fechadura de tags, mas no formato escrito. <code>&-g-t-;</code></p>
+        </section>
+    
+        <section>
+            <h2>Caracteres especiais</h2>
+            <div class="box">
+                &copy; &trade; &reg; &euro; &dollar; &pound; &yen; &Delta; &Omega;
+            </div>
+        </section>
+
+        <section>
+            <h2>Emojis</h2>
+            <div class="box">
+                &#x1F596; &#x1F44D; &#x1F44E;
+            </div>
+        </section>
+    </main>
     <footer>
         <p>&copy; Gabriel Eduardo</p>
     </footer>

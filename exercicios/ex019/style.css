@@ -12,7 +12,8 @@ h1 {
     color: #268823;
 }
 
-h1#principal {
+/* # referencia um id */
+#principal {
     color: #d8d82c;
     text-align: center;
 }
@@ -21,6 +22,7 @@ h2 {
     color: #5c2da7;
 }
 
+/* . referencia uma class */
 .basico {
     color: #268823;
 }
@@ -35,10 +37,11 @@ h2 {
 
 footer {
     margin-top: auto;
+    padding-top: 40px;
 }
 
 footer > p {
     text-align: center;
     font-style: italic;
-    opacity: 0.7;
+    opacity: 0.3;
 }

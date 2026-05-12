@@ -1,10 +1,11 @@
 @charset "UTF-8";
 
-/* Seletor universal das CSS. Altera todos os elementos da página */
+/* Seletor universal das CSS. Defien a configuração das propriedades de todos os elementos da página/projeto */
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Toda a parte verde que possui o degradê  na tela */
 body {
     background-image: linear-gradient(to right, #44803F, #B4CF66); /* cor de fundo com degradê */
     display: flex;
@@ -13,13 +14,14 @@ body {
     margin: 0;
 }
 
+/* Caixa que contém o conteúdo (fundo branco) */
 main {
     background-color: white;
-    width: 500px; /* largura */
-    padding: 10px; /* espaçamento interno, enetre o conteúdo e a borda */
-    border-radius: 9px; /* bordas arredondadas */
-    box-shadow: 10px 10px 10px #ff583352; /* Adicona uma sombra */
-    margin: 20px auto; /* centraliza o elemento */
+    width: 500px; /* Aumenta a largura */
+    padding: 10px; /* Adiciona espaçamento interno, entre o conteúdo e a borda */
+    border-radius: 9px; /* Adiciona bordas arredondadas */
+    box-shadow: 10px 10px 10px #ff583352; /* Adicona uma sombra na caixa */
+    margin: 20px auto; /* Centraliza o elemento horizontalmente */
 }
 
 h1 {
@@ -30,6 +32,7 @@ h1 {
 
 h2 {
     color: #FFEC5C;
+    text-shadow: 2px 2px 0px #44803f75;
 }
 
 p {
