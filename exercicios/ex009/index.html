@@ -6,53 +6,252 @@
     <title>Listas</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <style> 
-        body {
-            background-color: rgba(96, 70, 243, 0.979);
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            color: bisque;
+        * {
+            box-sizing: border-box; /* Faz com que os elementos sejam calculados sem considerar 'border' e 'padding'. Remove todas as 'margin' e 'padding' */
+            margin: 0;
+            padding: 0;
         }
 
-        h1 {
+        body {
+            background-color: rgb(26, 91, 231);
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            min-height: 100vh;
+            color: bisque;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f3ba3f;
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 10px;
+            border: 0 0 2px 2px solid black;
+            border-radius: 0 0 10px 10px;
+            width: 100%;
+        }
+
+        header h1 {
+            color: rgb(255, 255, 255);
+            margin: 0;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        header > p {
+            color: rgb(128, 124, 120);
+            font-size: 12px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        main {
+            margin: 30px;
+        }
+
+        main h1 {
             font-family:'Courier New', Courier, monospace;
             color: rgb(175, 175, 240);
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgb(248, 245, 245);
         }
 
-        ol.caderno {
-            background-color: #f8d857;
-            color: black;
-            padding: 15px 30px;
-            border-left: 6px solid rgb(177, 102, 4); /* Cria uma borda na esquerda */
-            font-family: 'Courier New', Courier, monospace;
-            width: fit-content; /* Ajusta o tamanho do caderno de acordo com o conteúdo dentro dele */
+        
+        h2 {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-            background-image: repeating-linear-gradient( /* Cria um desenho de caderno, adicionando linhas. Aqui, a cada 22 px, adiciona uma linha preta */
-                to bottom, /* O desenho das linhas começa na parte de inferior do caderno */
-                transparent, /* Inicia com uma linha transparente em 0 px e vai até 22 px */
-                transparent 22px, /* A linha transparente vai até 22 px, que é os espaço entre as linhas */
-                #0e0e0e 23px /* Aqui, é a linha preta (1px) */
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 16px;
+            background-color: #e6771c;
+            border-radius: 2px;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* --- CADERNO --- */
+        ol.caderno {
+            background-color: #f8c436;
+            font-family: 'Courier New', Courier, monospace;
+            color: #222;
+            padding: 15px 15px 15px 40px;
+            border-left: 6px solid #e6771c;
+            border-radius: 0 8px 8px 0;
+            width: fit-content; /* Faz com a caixa se adapte ao tamanho do conteúdo */
+            min-width: 240px;
+            background-image:repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent 21px,
+                rgba(29, 27, 27, 0.158) 23px
             );
         }
 
-        /* Estiliza as linhas do caderno para cada item, adicionando um espaço entre as linhas */
-        ol.caderno li { 
-            line-height: 25px;
+        ol.caderno li {
+            line-height: 23px;
+            font-size: 15px;
         }
 
-        h2 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* --- COMPRAS --- */
+        ul.compras {
+            list-style: none; /* Remove o ícone de bolinha da lista */ 
+            display: flex;
+            flex-wrap: wrap; /* Quebra a linha quando o conteúdo ultrapassar o tamanho da caixa */
+            gap: 10px;
+            padding: 0;
         }
 
-        li {
+        ul.compras li {
+            background: #e7e7e43b;
+            color: bisque;
             font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            border: 1px solid #fcfbfb2d;
+            border-radius: 20px;
+            padding: 5px 13px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        dd {
+        ul.compras li:hover {
+            background-color: #f8c436;
+            color: #222;
+            cursor: default;
+        }
+
+        /* --- GAMES --- */
+        .games-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .plataform-card {
+            background-color: rgba(240, 248, 255, 0.082);
+            border: 1px solid #fcfbfb2d;
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .plataform-title {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            opacity: 0.6;
+            font-weight: 600;
+            font-size: 18px;
+            color: #ef9f27;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        dt {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        .plataform-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        ul.games-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.games-list > li {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+            color: bisque;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        ul.games-list > li:last-child {
+            border-bottom: none;
+        }
+
+        ul.games-list > li::before {
+            content: '▸';
+            color: #AFA9EC;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        ul.sub-games {
+            list-style: none;
+            padding: 2px 0 2px 12px;
+            margin-top: 2px;
+        }
+
+        ul.sub-games li {
+            font-size: 0.78rem;
+            color: rgba(245, 222, 179, 0.7);
+            font-family: 'Courier New', Courier, monospace;
+            padding: 1px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        ul.sub-games li::before {
+            content: '–';
+            color: #AFA9EC;
+        }
+
+        .game-entry {
+            display: flex;
+            flex-direction: column;
+        }
+
+         /* GLOSSÁRIO */
+        dl.glossary {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        dl.glossary .glossary-item {
+            background: rgba(255, 255, 255, 0.08);
+            border-left: 3px solid #EF9F27;
+            border-radius: 0 8px 8px 0;
+            padding: 10px 14px;
+        }
+
+        dl.glossary dt {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 0.95rem;
+            color: #EF9F27;
+            margin-bottom: 3px;
+        }
+
+        dl.glossary dd {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 0.85rem;
+            color: rgba(245, 222, 179, 0.75);
+            margin-left: 0;
+            opacity: 1; /* sobrescreve o 0.6 do original */
+        }
+
+        abbr {
+            text-decoration: dotted underline;
+            cursor: help;
         }
 
         footer {
@@ -66,78 +265,123 @@
             color: azure;
             opacity: 0.6;
             font-size: 10px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
-    <h1>Trabalhando com listas</h1>
-    <h2>&#x1F4CB Listas ordenadas</h2>
-    <!--
-    type 1: 1, 2, 3, 4... (padrão)
-    type A: A, B, C, D...
-    type a: a, b, c, d...
-    type I: I, II, III, IV...
-    type i: i, ii, iii, iv...
-    -->
-    <ol class="caderno "type="1">
-        <li>Acordar</li>
-        <li>Agradecer a Deus</li>
-        <li>Escovar os dentes</li>
-        <li>Tomar café</li>
-        <li>Ir para o trabalho</li>
-        <li>Almoçar</li>
-    </ol>
-
-    <h2>Listas não ordenadas</h2>
-    <ul>
-        <li>Leite</li>
-        <li>Pão</li>
-        <li>Queijo</li>
-        <li>Tomate</li>
-        <li>Cebola</li>
-    </ul>
-
-    <h2>Meus jogos favoritos</h2>
-    <ol type="I">
-        <li>Xbox e PS5</li>
-        <ol>
-            <li>God of War</li>
-            <ol type="a">
-                <li>God of War I</li>
-                <li>God of War II</li>
-                <li>God of War III</li>
-            </ol>
-            <li>The Elder Scrolls</li>
-            <ol>
-                <li>Skyrim</li>
-                <li>Oblivion</li>
-                <li>Morrowind</li>
-            </ol>
-            <li>Fifa</li>
-            <li>Subnautica</li>
-            <li>The Witcher</li>
-        </ol>
-        <li>Nintendo</li>
-        <ul type="square">
-            <li>The Legend of Zelda</li>
-            <li>Super Mario</li>
-            <li>Metroid</li>
-            <li>Animal Crossing</li>
-            <li>Pokémon</li>
-        </ul>
-    </ol>
     
-    <h2>Lista de definição</h2>
-    <dl>
-        <dt><abbr title="Hypertext Markup Language">HTML</abbr></dt>
-        <dd>Linguagem de marcação para criação de páginas web.</dd>
-        <dt><abbr title="Cascading Style Sheets">CSS</abbr></dt>
-        <dd>Linguagem de marcação de estilo para páginas web.</dd>
-        <dt>JavaScript</dt>
-        <dd>Linguagem de programação para criar interatividade em páginas web.</dd>
-    </dl>
+    <header>
+        <h1>Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
+        <p>Exercício 009 - Listas</p>
+    </header>
+
+    <main>
+        <h1>📋 Trabalhando com listas</h1>
+
+        <div class="section">
+            <h2>Listas ordenadas - Rotinas diárias</h2>
+            <!--
+            type 1: 1, 2, 3, 4... (padrão)
+            type A: A, B, C, D...
+            type a: a, b, c, d...
+            type I: I, II, III, IV...
+            type i: i, ii, iii, iv...
+            -->
+            <ol class="caderno" type="1">
+                <li>Acordar</li>
+                <li>Agradecer a Deus</li>
+                <li>Escovar os dentes</li>
+                <li>Tomar café</li>
+                <li>Ir para o trabalho</li>
+                <li>Almoçar</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Listas não ordenadas - Lista de compras</h2>
+            <ul class="compras">
+                <li>🥛Leite</li>
+                <li>🍞Pão</li>
+                <li>🧀Queijo</li>
+                <li>🍅Tomate</li>
+                <li>🧅Cebola</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Lista aninhada - Meus jogos favoritos</h2>
+            <div class="games-container">
+                <div class="plataform-card">
+                    <div class="plataform-title">
+                        <span class="plataform-icon">🎮</span>
+                        XBox e PlayStation
+                    </div>
+                    <ul class="games-list">
+                        <li>
+                            <div class="game-entry">
+                                God of War
+                                <ul class="sub-games">
+                                    <li>God of War I</li>
+                                    <li>God of War II</li>
+                                    <li>God of War III</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="game-entry">
+                                The Elder Scrolls
+                                <ul class="sub-games">
+                                    <li>Skyrim</li>
+                                    <li>Oblivion</li>
+                                    <li>Morrowind</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><div class="game-entry">Fifa</div></li>
+                        <li><div class="game-entry">Subnautica</div></li>
+                        <li><div class="game-entry">The Witcher</div></li>
+                    </ul>
+                </div>
+
+                <div class="plataform-card">
+                    <div class="plataform-title">
+                        <span class="plataform-icon">🕹️</span>
+                        Nintendo
+                    </div>
+                    <ul class="games-list">
+                        <li><div class="game-entry">The Legend of Zelda</div></li>
+                        <li><div class="game-entry">Super Mario</div></li>
+                        <li><div class="game-entry">Metroid</div></li>
+                        <li><div class="game-entry">Animal Crossing</div></li>
+                        <li><div class="game-entry">Pokémon</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Lista de definição</h2>
+            <dl class="glossary">
+                <div class="glossary-item">
+                    <dt><abbr title="Hypertext Markup Language">HTML</abbr></dt>
+                    <dd>Linguagem de marcação para criação de páginas web.</dd>
+                </div>
+                <div class="glossary-item">
+                    <dt><abbr title="Cascading Style Sheets">CSS</abbr></dt>
+                    <dd>Linguagem de marcação de estilo para páginas web.</dd>
+                </div>
+                <div class="glossary-item">
+                    <dt>JavaScript</dt>
+                    <dd>Linguagem de programação para criar interatividade em páginas web.</dd>
+                </div>
+            </dl>
+        </div>
+    </main>
+
     <footer>
         <p>&copy;Gabriel Eduardo</p>
     </footer>
+
 </body>
 </html>

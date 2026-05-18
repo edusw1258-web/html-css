@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.container {
+            background-color: lightblue;
+            display: flex; 
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightgreen;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 200px;
+        }
+
+        /* As propriedades de 'flex-shrink' e 'flex-grow' aceitam basicamente dois valores, 0 (não muda de tamanho) e 1 (muda de tamanho) */
+        /* Pomdeos aplicar outros valores além de 0 e 1, nesse caso, os elementos sofrerão mudança nos tamanhos de forma proporcional, mas é preciso que exista pelo menos dois valores distindo além do 0, no qual o valor menor será a referência para o cálculo da proporcionalidade. */
+        div#cxA {
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+
+        div#cxB {
+            flex-shrink: 1;
+            flex-grow: 4;
+        }
+
+        div#cxC {
+            flex-shrink: 2;
+            flex-grow: 2; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="item" id="cxA">A</div>
+       <div class="item" id="cxB">B</div>
+       <div class="item" id="cxC">C</div>
+    </div>
+</body>
+</html>

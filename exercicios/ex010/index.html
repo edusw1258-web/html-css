@@ -6,60 +6,364 @@
     <title>Trabalhando com links</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
         body {
-            background-color: rgb(187, 221, 196);
+            background: linear-gradient(150deg, #1d9e75 0%, #085041 100%);
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: rgb(0, 0, 0);
-            min-height: 100vh; /* Ajusta a página na tela para que não haja rolagem lateral */
-            display: flex; /* Permite organizar o posicionameto dos elementos */
-            flex-direction: column; /* Organiza os elementos verticalmente */
+            color: antiquewhite;
+            min-height: 100vh;
+            padding: 0 0 30px 0;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        header {
+            background-color: #ef9f27;
+            height: 200px;
+            display: flex;
+            flex-direction: column; /* Organiza os elementos em forma de coluna */
+            justify-content: center; /* Alinha os elementos horizontalmente*/
+            align-items: center; /* Alinha os elementos verticalmente */
+            border-radius: 0 0 10px 10px;
+            margin: 0 0 60px 0;
+        }
+
+        header h1 {
+            font-size: 35px;
+            color: rgb(255, 255, 255);
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header p {
+            font-size: 0.8em;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+
+        main {
+            margin: 40px;
+            max-width: 90%;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #9fe1cb;
+            border-bottom: 1px solid rgb(159, 225, 203, 0.25);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #5dcaa5;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            gap: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            background-color: #ef9f27;
+            content: '';
+            width: 3px;
+            height: 15px;
+            border-radius: 2px;
+            display: inline-block;
         }
 
         p {
-            color: rgb(156, 22, 22);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #c9ede2;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
 
+        /* LINKS */
         a {
-            color: rgb(230, 27, 27);
+            color: #f1ede667;
+            text-decoration: none;
+            border-bottom: 1px solid #ef9f273d; 
+            transition: color o.15s, border-color 0.15s;
         }
 
-        /* Uma pseudo-classe (:) altera o estado ou condição de um elemento */
-        /* Um pseudo-elemento (::) adiciona algo ou seleciona parte de um elemento */
-        /* Pseudo-classe que muda a cor da fonte quando o mouse passa por cima do link */
+        /* Pseudo-classe que irá mudar a cor ao passar o mouse por cima */
         a:hover {
-            color: rgb(76, 11, 255);
+            color: #fac775;
+            border-color: #ef9f273d;
         }
+
+        .link-desc {
+            font-size: 16px;;
+            color: #c9ede2;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .soc-name {
+            font-size: 16px;
+            color: #ef9f27;
+            text-decoration: none;
+        }
+
+        /* LINKS EXTERNOS */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .link-card {
+            background-color: #ffffff2f;
+            border: 1px solid #ffffff2f;
+            border-radius: 10px;
+            padding: 15px;
+            gap: 12px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.15s, border-color 0.15s;
+        }
+
+        .link-card:hover {
+            background-color: #ffffff36;
+            border-color: #ffffff36;
+        }
+
+        .link-card .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-github {
+            background-color: #fffdfd3a;
+            color: #ffffff;
+        }
+
+        .icon-yt {
+            background-color: #0f0f0f5b;
+            color: #ffffff;     
+        }
+
+        .link-card .info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            overflow: hidden;
+        }
+
+        .link-card .label {
+            font-size: 16px;
+        }
+
+        .link-card .url {
+            font-family:'Courier New', Courier, monospace;
+            font-size: 14px;
+            color: #9fe1cb;
+            white-space: nowrap; /* Impede a quebra de linha do texto */
+            overflow: hidden; /* Oculta a parte de texto que foi cortada */
+            text-overflow: ellipsis; /* Adiciona pontos suspensivos (...) no final, onde o texto foi cortado. Só funciona com 'white-space: nowrap' e 'overflow: hidden' */
+        }
+
+        /* LINKS INTERNOS */
+        .page-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .page-card {
+            background-color: #ffffff2f;
+            border: 1px solid #ffffff2f;
+            border-radius: 10px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: background-color 0.15s, border-color 0.15s;
+        }
+
+        .page-badge {
+            background: #ffffff2f;
+            color: #9fe1cb;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 20px;
+            padding: 2px 8px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .page-card a {
+            font-size: 15px;
+            color: #ef9f27;
+            border: none;
+        }
+
+        .page-card a:hover {
+            color: #fac775;
+        }
+
+        /* DOWNLOADS */
+        /* Pegue uma 'ul' que tenha essa classe dentro 'dl-list' */
+        ul.dl-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .dl-item {
+            background-color: #ffffff2f;
+            border: 1px solid #ffffff2f;
+            border-radius: 10px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;   
+        }
+
+        .dl-badge {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-radius: 5px;
+            padding: 2px 8px;
+            flex-shrink: 0;  
+        }
+
+        .badge-pdf {
+             background: rgba(220, 38, 38, 0.2); color: #f87171; 
+        }
+
+        .badge-zip { 
+            background: rgba(239, 159, 39, 0.2); color: #FAC775; 
+        }
+
+        .dl-item a {
+            font-size: 17px;
+            color: #ef9f27;
+            border: none;
+            flex: 1; /* O elemento pode crescer */
+        }
+
+        .dl-item a:hover {
+            color: #fac775;
+        }
+
+        .dl-arrow {
+            font-size: 14px;
+            color: #9fe1cb;
+            flex-shrink: 0; /* O elemento não pode encolher */
+        }
+
 
         footer {
             text-align: center;
             margin-top: auto;
-            font-size: 14px;
-            color: rgb(0, 0, 0);
-            opacity: 1.2;
         }
 
         footer p {
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 11px;
             font-style: italic;
-            color: rgb(116, 109, 109);
+            color: rgba(255, 255, 255, 0.466);
         }
     </style>
 </head>
 <body>
-    <h1>Aprendendo a criar links</h1>
-    <h2>Usando links externos</h1>
-    <p>Acesse o repositório do curso em vídeo no Github <a href="https://gustavoguanabara.github.io/">Clique aqui</a></p>
-    <p>Para mais aulas verifique o canal no Youtube do <a href="http://youtube.com/cursoemvideo/">Curso em Vídeo</a></p>
-    <h2>Usando links internos</h1>
-    <p>Esta é a primeira página do site. Se quiser verificar a segunda clique aqui: <a href="pag002.html" rel="next">Segunda página</a></p>
-    <p>Se quiser saber mais, pode acessar nossa páginas de notícias: <a href="noticias/pag003.html" rel="next" target="_self">Notícias</a></p>
+    <header>
+        <h1>Curso HTML e CSS - Curso em Vídeo</h1>
+        <p>Exercício 010 - Links</p>
+    </header>
 
-    <h2>Links para download</h1>
-    <ul>
-        <li><a href="livro/10 - Ligações em toda parte_compressed (1).pdf" download="10 - Ligações em toda parte_compressed (1).pdf" type="application/pdf">Baixe o aquivo em PDF clicando aqui</a></li>
-        <li><a href="livro/PDFTools.zip" download="PDFTools.zip" type="application/zip">Baixe o livro em zip aqui</a></li>
-    </ul>
+    <main>
+        <h1>🔗Aprendendo a criar links</h1>
+        <!-- LINKS EXTERNOS -->
+        <div class="section">
+            <h2>Links externos</h2>
+            <div class="card-grid">
+                <div class="link-card">
+                    <div class="icon icon-github">🐙</div>
+                    <div class="info">
+                        <span class="label">Repositório do GitHub</span>
+                        <a class="url" href="https://gustavoguanabara.github.io/" target="_blank" rel="noopener">gustavoguanabara.github.io</a>
+                    </div>
+                </div>
+                <div class="link-card">
+                    <div class="icon icon-yt">▶️</div>
+                    <div class="info">
+                        <span class="label">Canal do Curso em Vídeo
+                        </span>
+                        <a class="url" href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank" rel="noopener">youtube.com/cursoemvideo</a>
+                    </div>
+                </div>
+            </div>
+            <p class="link-desc">
+                Acesse nosso repositório do <span class="soc-name">Github</span> e o nosso canal no <span class="soc-name">YouTube</span>.
+            </p>
+        </div>
+        <!-- LINKS INTERNOS -->
+        <div class="section">
+            <h2>Links internos</h2>
+            <div class="page-grid">
+                <div class="page-card">
+                    <span class="page-badge">Página 2</span>
+                    <a href="pag002.html" rel="next">Segunda página</a>
+                </div>
+                <div class="page-card">
+                    <span class="page-badge">Notícias</span>
+                     <a href="noticias/pag003.html" rel="next" target="_self">Página de notícias</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- DOWNLOAD -->
+        <div class="sectiom">
+            <h2>Links para download</h2>
+            <ul class="dl-list">
+                <li class="dl-item">
+                    <span class="dl-badge badge-pdf">PDF</span>
+                    <a href="livro/10 - Ligações em toda parte_compressed (1).pdf"
+                       download="10 - Ligações em toda parte_compressed (1).pdf"
+                       type="application/pdf">Baixar livro em PDF</a>
+                    <span class="dl-arrow">↓</span>
+                </li>
+                <li class="dl-item">
+                    <span class="dl-badge badge-zip">ZIP</span>
+                    <a href="livro/PDFTools.zip"
+                       download="PDFTools.zip"
+                       type="application/zip">Baixar ferramentas em ZIP</a>
+                    <span class="dl-arrow">↓</span>
+                </li>
+            </ul>
+        </div>
+    </main>
+    
     <footer>
         <p class="marca">&copy;Gabriel Eduardo</p>
     </footer>
