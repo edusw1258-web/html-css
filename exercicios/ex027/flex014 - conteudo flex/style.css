@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;  
+}
+
+p {
+    margin-bottom: 10px;
+    text-align: justify;   
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+header, section.normal {
+    padding: 20px
+}
+
+/* Contêiner (elemento pai) */
+section.flex-content {
+    padding: 20px;
+    background-color: gray;
+
+    display: flex; /* Permite organizar o posicionameto dos elementos, por padrão, os itens irão ficar na horizontal */
+    flex-flow: column nowrap;
+}
+
+/* Elemento filho 01 */
+article.text-media {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /* Cola os elmentos nas bordas e adiciona um espaço entre eles */
+}
+
+/* Elemento filho 02 */
+article.media-text {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between; /* Cola os elmentos nas bordas e adiciona um espaço entre eles */
+}
+
+article > div.text {
+    flex: 1 1 500px;
+
+    border: 2px dashed blue
+}
+
+article > div.media {
+    flex: 1 0 500px;
+
+    border: 2px dashed red;
+}
+
+div.media > img {
+    display: block; /* Faz com que se comporte como um bloco */
+    margin: auto; /* Centraliza o elemento, precisa que o elemento seja um bloco*/
+    padding: 10px;
+}
+
+div.media > iframe {
+    display: block; /* Faz com que se comporte como um bloco */
+    margin: auto; /* Centraliza o elemento, precisa que o elemento seja um bloco*/
+    width: 90%;
+}
+
