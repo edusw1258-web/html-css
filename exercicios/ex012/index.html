@@ -5,35 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vídeos em HTML5</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: rgb(158, 140, 180);
-            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-            min-height: 100vh; /* Ajusta a pagina para o tamanho definido (largura) */
-            display: flex; /* Permite controlar o posicionameto dos elementos */
-            flex-direction: column; /* Organiza os elementos verticalmente */
-            align-items: center; /* Centraliza horizontalmente */
-            margin: 0; /* Remove as margens */
+            background-color: rgb(215, 214, 194);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        h1 {
+        header {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
             text-align: center;
-            color: rgb(0, 0, 0);
+            padding: 20px;
+            margin-bottom: 40px;
         }
 
-        /* Ajustes da div que contém os videos */
-        div { 
-            display: flex; /* Permite organizar o posicionameto dos elementos */
-            flex-direction: column; /* Centraliza verticalmente */
-            width: 100%; /* Faz com que a 'div' ocupe 100% da vw */
-            align-items: center; /* Centraliza horizontalmente */
-            gap: 20px; /* Espaçamento entre os vídeos */
+        header > p {
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
         }
 
-        /* Seleciona somenete a tag 'video' dentro de uma 'div' */
-        div > video {
-            border: 3px solid rgb(100, 80, 140);
+        main {
+            justify-content: center; /* Alinha o próprio 'main' em relação ao elemento pai ('body') */
+            flex-wrap: nowrap; 
+            display: flex; /* Permite controlar o posicionamento dos elementos filhos */
+            text-align: center; /* Alinha os elementos filhos */
+        }
+
+        .card {
+            background-color: rgb(235, 237, 213);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+        }
+
+
+        .card > h2 {
+            font-size: 24px;
+            margin-bottom: 100px;
+        }
+
+        .card-desc {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .video {
+            width: 90%;
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .span-top1 {
+            display: flex;
+            width: fit-content;
+            padding: 1px 10px;
+            text-transform: uppercase;
+            font-size: 12px;
+            background-color: rgba(255, 103, 103, 0.315);
+            border: 1px solid rgb(205, 103, 103);
             border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .span-top2 {
+            display: flex;
+            width: fit-content;
+            padding: 1px 10px;
+            text-transform: uppercase;
+            font-size: 12px;
+            background-color: rgba(106, 243, 79, 0.224);
+            border: 1px solid rgb(35, 95, 23);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .card-end {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            color: rgba(65, 61, 61, 0.662);
+            display: flex;
+            margin-top: 20px;
+            padding: 20px 0 0 40px;
+            border-top: 1px solid rgb(205, 205, 205);
+            gap: 20px;
         }
 
         footer {
@@ -45,26 +112,58 @@
         footer p {
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-style: italic;
-            font-size: 14px;
-            color: rgb(61, 54, 54);
-            opacity: 0.8;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: rgba(61, 54, 54, 0.32);
         }
     </style>
 </head>
 <body>
-    <h1>Inserindo vídeos hospedados localmente</h1>
-    <p>Este vídeo está hospedado no próprio servidor da máquina, ou seja, está hospedado localmente.</p>
-<div class="form">
-    <video poster="imagens/vlcsnap-2026-01-21-21h20m10s805.png" width="550" height="315" controls autoplay loop>
-        <source src="midia/meuvideo.mp4" type="video/mp4">
-        <source src="midia/meuvideo.mkv" type="video/mp4">
-        <source src="midia/meuvideo.webm.webm" type="video/webm">
-        <p>Seu navegador não tem compatibilidade com vídeos HTML5.  </p>
-    </video>
+    <header>
+        <h1>HTML e CSS - Curso em Vídeo</h1>
+        <p>Exercício 12 - Vídeos em HTML5</p>
+    </header>
     
-    <h1>Inserindo vídeos do YouTube (Servidores externos)</h1>
-    <iframe width="550" height="315" src="https://www.youtube.com/embed/X-lXfmWToIY?si=Aatn_owR_CpSJVFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-</div>
+    <main>
+        <div class="form">
+            <div class="card">
+                <div class="card-desc">
+                    <span class="span-top1">💻Hospedagem Local</span>
+                    <h2>Vídeo no servidor local</h2>
+                    <p>Este vídeo está hospedado na própria máquina (servidor local). O navegador testa cada formato de vídeo até econtrar um compatível.</p>
+                </div>
+                <div class="video">
+                    <video poster="imagens/vlcsnap-2026-01-21-21h20m10s805.png" width="550" height="315" controls autoplay loop>
+                        <source src="midia/meuvideo.mp4" type="video/mp4">
+                        <source src="midia/meuvideo.mkv" type="video/mp4">
+                        <source src="midia/meuvideo.webm.webm" type="video/webm">
+                        <p>Seu navegador não tem compatibilidade com vídeos HTML5.  </p>
+                    </video>
+                </div>
+                <div class="card-end">
+                    <span><i class="fa-solid fa-film"></i> MP4. MKV. WebM</span>
+                    <span><i class="fa-solid fa-rotate"></i> Loop ativado</span>
+                    <span><i class="fa-solid fa-play"></i> Controles nativos</span>
+                </div>
+            </div>
+        
+            <div class="card">
+                <div class="card-desc">
+                    <span class="span-top2">YouTube</span>
+                    <h2>Vídeo do YouTube</h2>
+                    <p>Incorporado via &lt;iframe&gt; com o plauer oficial do YouTube. O conteúdo será carregado a partir do servidor do YouTube.</p>
+                </div>
+                <div class="video">
+                    <iframe width="550" height="315" src="https://www.youtube.com/embed/X-lXfmWToIY?si=Aatn_owR_CpSJVFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="card-end">
+                    <span><i class="fa-solid fa-globe"></i> Servidor externo</span>
+                    <span><i class="fa-solid fa-expand"></i> Tela Cheia</span>
+                    <span><i class="fa-solid fa-share-alt"></i> Compartilhamento</span>
+                </div>
+            </div>
+        </div>
+    </main>
     
 <footer>
     <p>&copy; Gabriel Eduardo</p>
