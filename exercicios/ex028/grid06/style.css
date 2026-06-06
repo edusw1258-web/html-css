@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.caixa1 {
+    /*
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    */
+    
+    /*
+    grid-row: 1 / 2; /* Shorthand para 'grid-row-start' e 'grid-row-end'
+    grid-column: 1 / -1; /* Shorthand para 'grid-column-start' e 'grid-column-end' 
+    */
+
+    
+    background-color: #ff0000;
+    grid-area: 1 / 1 / span 1 / 5; /* Shorthand para 'grid-row-start', 'grid-column-start', 'grid-row-end' e 'grid-column-end', nessa mesma ordem */
+}
+
+.caixa2 {
+    /*
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    */
+    
+    /*
+    grid-row: 2 / 4;
+    grid-column: 1 / span 2; /* 'span' é usada para definir o número de linhas/colunas que a área irá se expandir 
+    */
+    
+    
+    background-color: #04ff04;
+    grid-area: 2 / 1 / span 2 / 3;
+}
+
+.caixa3 {
+    /*
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    */
+
+    /*
+    grid-row: 2 / 4;
+    grid-column: 3 / 5;
+    */
+
+    background-color: #0000ff;
+    grid-area: 2 / 3 / span 2 / 5;
+}
