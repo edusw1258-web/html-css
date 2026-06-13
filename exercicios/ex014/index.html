@@ -6,25 +6,15 @@
     <title>Estilos Inline</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* '160deg' é a direção do gradiente, '0%' é a cor inicial, '50%' é a cor intermediária e '100%' é a cor final. */
         body {
-            background-color: rgb(156, 56, 76);
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            background-image: linear-gradient(160deg, #2b0f17 0%, #4a1726 50%, #6e2233 100%);
         }
 
-        h1 {
-            color: rgb(54, 134, 204);
-        }
-
-        h2 {
-            color: rgb(240, 240, 240);
-        }
-
-        p {
-            text-align: justify; /* Adiciona espaçamento entre as palavras para que todas as linhas fiquem alinhadas */
-        }
 
         footer {
             text-align: center;
@@ -42,14 +32,37 @@
     </style>
 </head>
 <body>
-    <h1>Capítulo 1</h1>
-    <h2>Capítulo 1.1</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi sint vel itaque laborum temporibus at iste rerum minima, reiciendis officiis dolore beatae pariatur, soluta illo dolorem, laudantium cum! Impedit, atque.</p>
-    <h2>Capítulo 1.2</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor magni quasi, nostrum eum voluptates, corrupti aperiam deserunt facilis, assumenda suscipit voluptate? Sunt optio vitae modi ipsum laboriosam perferendis nam perspiciatis?</p>
-    <h1>Capítulo 2</h1>
-    <h2>Capítulo 2.1</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, cupiditate nesciunt ut ipsam praesentium iste repudiandae modi aperiam odio aliquam debitis voluptatem facere animi. Eos, cumque. Cum sequi asperiores cumque.</p>
+    <header>
+        <h1>HTML e CSS - Curso em Vídeo</h1>
+        <p>Exercício 14 - Estilos Inline</p>
+    </header>
+
+    <main>
+        <div>
+            <h2>Capítulo 1</h2>
+            <div>
+                <h3>Capítulo 1.1</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi sint vel itaque laborum temporibus at iste rerum minima, reiciendis officiis dolore beatae pariatur, soluta illo dolorem, laudantium cum! Impedit, atque.</p>
+            </div>
+            <div>
+                <h3>Capítulo 1.2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor magni quasi, nostrum eum voluptates, corrupti aperiam deserunt facilis, assumenda suscipit voluptate? Sunt optio vitae modi ipsum laboriosam perferendis nam perspiciatis?</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Capítulo 2</h2>
+            <div>
+                <h3>Capítulo 2.1</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, cupiditate nesciunt ut ipsam praesentium iste repudiandae modi aperiam odio aliquam debitis voluptatem facere animi. Eos, cumque. Cum sequi asperiores cumque.</p>
+            </div>
+            <div>
+                <h3>Capítulo 2.2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatum. Quisquam, voluptatum.</p>
+            </div>
+        </div>
+    </main>
+
     <footer>
         <p>&copy; Gabriel Eduardo</p>
     </footer>
