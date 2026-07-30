@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="icon/favicon-32x32 copy.png" type="image/x-icon">
     <style>
         body {
-            background-color: chocolate;
+            background-color: rgb(109, 72, 46);
             font-family: Arial, Helvetica, sans-serif;
             font-size: large; /* Tamanho da fonte*/
             font-weight: bold; /* Peso da fonte */
@@ -16,22 +16,48 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .texto {
+            margin: auto 0px 0px 0px;
+            min-height: 400px;
+            width: 60%;
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+        }
         
         h1 {
             /* Modelo padrão para fontes em CSS */
             font-family: 'Work Sans', sans-serif;
-            font-size: 3em;
+            font-size: 40px;
             font-weight: bolder;
             font-style: italic;
+            text-align: center;
+            color: rgb(244, 241, 241);
             
 
             /* Shorthand font - as mesmas propriedades mas simplificadas em uma única linha */
             /* - font-style -> font-weight -> font-size -> font-family */
-            font: italic bolder 3em 'Work Sans', sans-serif;
+            font: italic bolder 40px 'Work Sans', sans-serif;
         }
 
         h2 {
-            margin-top: 60px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        div > p {
+            text-align: justify;
+            text-indent: 30px;
         }
 
         footer {
@@ -47,11 +73,16 @@
     </style>
 </head>
 <body>
-    <h1>Trabalhando com fontes</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis exercitationem quam, ducimus amet molestias impedit in fugiat veniam quasi hic, magni tenetur enim nostrum, quaerat laudantium rerum molestiae suscipit!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolore error modi fugiat neque ipsum ullam ipsa harum, odit eaque fugit alias repellendus magni nesciunt cupiditate omnis, facilis sit. Porro.</p>
-    <h2>Subtítulo</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptatibus libero, tenetur dignissimos eius illum amet. Consectetur maiores accusantium nam. Assumenda repudiandae, unde fugit officia ad ex nobis? Natus, veniam?</p>
+    <main>
+        <h1>Trabalhando com fontes</h1>
+        <div class="texto">
+            <h2>Subtítulo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam officiis exercitationem quam, ducimus amet molestias impedit in fugiat veniam quasi hic, magni tenetur enim nostrum, quaerat laudantium rerum molestiae suscipit!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolore error modi fugiat neque ipsum ullam ipsa harum, odit eaque fugit alias repellendus magni nesciunt cupiditate omnis, facilis sit. Porro.</p>
+            <h2>Subtítulo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptatibus libero, tenetur dignissimos eius illum amet. Consectetur maiores accusantium nam. Assumenda repudiandae, unde fugit officia ad ex nobis? Natus, veniam?</p>
+        </div>
+    </main>
     <footer>
         <p>&copy; Gabriel Eduardo</p>
     </footer>
