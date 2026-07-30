@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de Textos</title>
+    <link rel="shortcut icon" href="icon/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+            <h1>Curso de HTML5 e CSS3 - Curso em Vídeos</h1>
+            <p>Exercício 007 - Formatação de textos</p>
+    </header>
+
+    <main>
+        <h1>Principais formatações</h1>
+        <div class="card">
+            <div class="card-head">
+                <h2>Negrito / Destaque</h2>
+                <div style="display: flex;gap:6px;">
+                    <span class="tag-semantic">&lt;b&gt;</span>
+                    <span class="tag-non-semantic">&lt;strong&gt;</span>
+                </div>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Não-semântico</span>
+                <p>Nesta frase temos um <b>termo em negrito</b> usando a tag &lt;b&gt;.</p>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Semântico</span>
+                <p>Nesta frase, tenho um <strong>termo em negrito</strong> usando a tag &lt;strong&gt;.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-head">
+                <h2>Itálico / Ênfase</h2>
+                <div style="display: flex;gap:6px;">
+                    <span class="tag-semantic">&lt;i&gt;</span>
+                    <span class="tag-non-semantic">&lt;em&gt;</span>
+                </div>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Não-semântico</span>
+                <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag &lt;i&gt;.</p>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Semântico</span>
+                <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag &lt;em&gt;.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-head">
+                <h2>Texto marcado</h2>
+                <span class="tag-semantic">&lt;mark&gt;</span>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Exemplo 1</span>
+                <p>Podemos criar também um texto marcado usando a tag &lt;mark&gt; </p>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Exemplo 2</span>
+                <p>E no outro parágrafo, temos <mark>outro texto marcado</mark> no final.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-head">
+                <h2>Texto grande e pequeno</h2>
+                <div style="display: flex;gap:6px;">
+                    <span class="tag-semantic">&lt;big&gt;</span>
+                    <span class="tag-semantic">&lt;small&gt;</span>
+                </div>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Exemplo</span>
+                <p>Estamos criando um <big style="font-weight: 600;">texto grande</big> e um <small style="font-weight: 600;">texto pequeno</small> nesse parágrafo.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-head">
+                <h2>Texto deletado</h2>
+                <div style="display: flex;gap:6px;">
+                    <span class="tag-semantic">&lt;del&gt;</span>
+                </div>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Exemplo</span>
+                <p>Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido, mas não considerado.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-head">
+                <h2>Texto inserido e sublinhado</h2>
+                <div style="display: flex;gap:6px;">
+                    <span class="tag-semantic">&lt;ins&gt;</span>
+                    <span class="tag-non-semantic">&lt;u&gt;</span>
+                </div>
+            </div>
+            <div class="card-txt"></div>
+                <div class="card-txt">
+                    <span class="sem-nsem">Semântico</span>
+                    <p>Podemos marcar <ins>um texto como inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois.</p>
+                </div>
+                <div class="card-txt">
+                    <span class="sem-nsem">Não-semântico</span>
+                    <p>Existe também o <u>sublinhado</u> com a tag U (não semântica)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-head">
+                <h2>Texto sobrescrito</h2>
+                <span class="tag-semantic">&lt;sub&gt;</span>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Exemplo</span>
+                <p>Para inserir expressões do tipo x<sup>20</sup>+3</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-head">
+                <h2>Texto subscrito</h2>
+                <span class="tag-semantic">&lt;sub&gt;</span>
+            </div>
+            <div class="card-txt">
+                <span class="sem-nsem">Exemplo</span>
+                <p>Para inserir fórmulas do tipo H<sub>2</sub>O</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Gabriel Eduardo</p>
+    </footer>
+</body>
+</html> 

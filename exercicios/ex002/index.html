@@ -9,10 +9,10 @@
         body {
             font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
             font-size: 20px;
-            font-weight: lighter; /* Peso da fonte. Deixa mais ou menos grossa/escura */
+            font-weight: lighter; /* Espessura da fonte */
             background-color: rgba(0, 0, 0, 0.199);
             min-height: 100vh; /* Garante que o corpo ocupe toda a altura da viewport */
-            display: flex; /* Permite ontrolar o posicionameto dos elementos, nesse caso, os filhos de 'body' ('img', 'main' e 'footer'), */
+            display: flex; /* Permite ontrolar o posicionameto dos elementos, nesse caso, os filhos de 'body' ('img', 'main' e 'footer') */
             flex-direction: column; /* Alinha os elementos verticalmente, precisa do 'display: flex' */
         }
 
@@ -23,15 +23,15 @@
         }
 
         header h1 {
-            font-size: 1.8em;
+            font-size: 32px;
             margin-bottom: 0;
         }
 
         header p {
-            font-size: 14px;
+            font-size: 13px;
             color: #555;   
             margin: 0; 
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
@@ -54,6 +54,7 @@
         code {
             background-color: rgb(83, 88, 88);
             border-radius: 5px;
+            padding: 0px 2px;
         }
 
         footer {
@@ -73,6 +74,7 @@
         <h1>Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
         <p>Exercício 002 - Parágrafos e quebras de linhas</p>
     </header>
+
     <main>
         <section>
             <h2>Parágrafos</h2>
@@ -81,7 +83,8 @@
 
         <section>
             <h2>Quebras de linhas</h2>
-            <p>Se necessário quebrar um texto em algum lugar específico, usamos a tag <code>&lt;br&gt;</code>.<br>
+            <p>Se necessário quebrar um texto em algum lugar específico, usamos a tag <code>&lt;br&gt;</code>.
+                <br><br>
                 Para usarmos os símbolos de abertura de tag sem necessariamente abrir uma tag usamos &lt e &gt seguidos de ponto e vírgula. <br>Veja: <code>&-l-t-;</code> tudo aqui dentro está entre os símbolos de abertura e fechadura de tags, mas no formato escrito. <code>&-g-t-;</code></p>
         </section>
     
@@ -99,6 +102,7 @@
             </div>
         </section>
     </main>
+    
     <footer>
         <p>&copy; Gabriel Eduardo</p>
     </footer>

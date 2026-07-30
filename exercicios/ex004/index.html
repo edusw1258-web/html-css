@@ -14,8 +14,8 @@
             min-height: 100vh;
         }
 
-        #favicont {
-            display: inline-flex;
+        #favicon-container {
+            display: inline-flex; /* O elemento se comporta com inline mas é possível organizar seus filhos como se fosse um flexbox */
             align-items: center;
             background-color: white;
             border: 0.5px solid rgb(34, 29, 34);
@@ -26,17 +26,17 @@
 
         #favicon {
             background-image: url('html.ico');
-            background-size: cover;
-            display: inline-flex; /* Ajusta a caixa ao tamanho do conteúdo */
-            align-items: center; /* Centraliza verticalmente o texto */
+            background-size: cover; /* O elemento irá ocupar todo o espaço disponível a ele prposto */
+            display: inline-flex; /* O elemento se comporta com inline mas é possível organizar seus filhos como se fosse um flexbox */
+            align-items: center; /* Centraliza o texto no eixo transversal (aqui na vertical) */
             width: 20px;
             height: 20px;
         }
 
         #favtxt {
             background-color: white;
-            background-size: cover;
-            display: inline-flex; /* Ajusta a caixa ao tamanho do conteúdo */
+            background-size: cover; /* A imagem cobre completamente o elemento pai, mesmo que parte dela precise ser cortada */
+            display: inline-flex; /* O elemento se comporta com inline mas é possível organizar seus filhos como se fosse um flexbox */
             align-items: center; /* Centraliza verticalmente o texto */
             font-size: 12px;
             border-radius: 5px;
@@ -46,21 +46,24 @@
 
         .cabecalho {
             text-align: center;
+            margin-top: 20px;
+            padding: 0;
             border-bottom: 1px solid rgb(255, 255, 255);
+        }
+
+        .cabecalho > h1 {
+            margin-bottom: 0;
+        }
+
+        .cabecalho > p {
+            margin-top: 0;
         }
 
         main {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; /* Centraliza o conteúdo horizontalmente e verticalmente */
+            align-items: center; /* Centraliza os itens horizontalmente (eixo transversal) */
+            flex-direction: column; /* Centraliza os elementos verticalmente */
             gap: 20px; /* Espaçamento entre os elementos filhos */
-        }
-
-        hr {
-            background-color: rgb(34, 29, 34);
-            border: none;
-            height: 1px;
         }
 
         .principal {
@@ -71,7 +74,6 @@
             max-width: 800px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
             transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades que mudarem */
         }
 
@@ -80,27 +82,27 @@
             box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
         }
 
-        #link {
-            background-color: rgba(5, 199, 248, 0.212);
+        #link-container {
+            background-color: rgba(18, 203, 249, 0.298);
             border: 0.5px solid rgba(34, 29, 34, 0);
             border-radius: 5px;
             margin-top: 60px;
             padding: 10px;
             display: flex;
-            align-items: flex-start;
             flex-direction: column;
+            align-items: flex-start; /* Alinha os elementos a partir da esquerda. Precisa dele para que o link seja acessado apenas clicando do texto do link */
             max-width: 380px;
         }
 
         .linktxt {
-            display: block;
+            display: block; /* Faz o elemento se comportar como um bloco, ocupando toda a largura do elemento pai */
             font-size: 12px;
             color: rgba(0, 0, 0, 0.507);
             text-transform: uppercase;
         }
 
         .link {
-            display: block;
+            display: inline-flex;
             color: rgb(34, 29, 34);
         }
 
@@ -113,8 +115,7 @@
         .link:hover {
             color: rgb(187, 64, 6);
         }
-
-
+  
         footer {
             text-align: center;
             margin-top: auto;
@@ -131,11 +132,12 @@
 </head>
 <body>
     <header>
-        <div id="favicont">
+        <div id="favicon-container">
             <div id="favicon"></div>
             <div id="favtxt">O favicon aparece aqui na aba</div>
         </div>
     </header>
+
     <main>
         <div class="cabecalho">
             <h1>Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
@@ -146,13 +148,14 @@
                 <h2>Favicon</h2>
                 <p>Favicon é o icone referente à páginaque aparece na aba do navegador. Para adiconá-lo basta adicionar um <em>link</em> para uma imagem que seja uma <em>favicon</em> dentro da área <em>head</em> no documento HTML.</p>
             </div>
-            <div id="link">
+            <div id="link-container">
                 <p class="linktxt">Para acessar o repositório gratuito de <em>icons</em> acesse:</p>
                 <a class="link" href="https://www.iconarchive.com/" target="_blank"> www.iconarchive.com</a>
             </div>
             </div>
         </div>
     </main>
+
     <footer>
         <p>&copy; Gabriel Eduardo</p>
     </footer>

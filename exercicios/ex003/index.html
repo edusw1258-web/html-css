@@ -27,25 +27,20 @@
             padding: 30px 20px;
         }
 
-        header h1 {
-            margin-bottom: 0;
-        }
-
         header p {
-            font-size: 14px;
+            font-size: 13px;
             color: #555;    
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
         main {
             width: 90%;
             max-width: 800px;
-            margin: 0 auto;
-
+            margin: 0 auto; /* Centraliza horizontalmente os elementos */
             display: grid; /* Faz com que os elementos sejam organizados em grade (linhas e colunas) */
-            grid-template-columns: repeat(3, 1fr); /* Divide o body em 3 colunas iguais (1fr) */
-            gap: 20px; /* Espaçamento entre os elementos da grade */
+            grid-template-columns: repeat(3, 1fr); /* Divide o body em 3 colunas (3) de proporções iguais (1fr) */
+            gap: 20px; /* Espaçamento entre os elementos */
         }
 
         .card {
@@ -59,8 +54,7 @@
             transition: 0.2s;
         }
 
-
-        /* Aumenta o tamanho do card ao passar o mouse por cima */
+        /* Move o card para top ao passar o mouse por cima */
         .card:hover {
             transform: translateY(-5px);
         }
@@ -72,6 +66,7 @@
 
         footer {
             margin-top: auto;
+            margin-bottom: 10px;
         }
         
         footer p {
@@ -86,6 +81,7 @@
         <h1>Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
         <p>Exercício 003 - Imagens em HTML</p>
     </header>
+
     <main>
         <div class="card">
             <img class="logohtml" src="imagens/logohtml200.png" alt="Logo HTML5">
@@ -102,8 +98,9 @@
             <p>Imagem externa (JavaScript)</p>
         </div>
     </main>
+
     <footer>
-        <p>&copy; Gabriel Eduardo</p>
+        <p>&copy;Gabriel Eduardo</p>
     </footer>
 </body>
 </html> 

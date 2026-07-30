@@ -6,142 +6,14 @@
     <title>Usando Negrito e Itálico</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@400;500&family=Lora:ital@0;1&display=swap" rel="stylesheet" />
-    <style>
-        body {
-            font-family: 'Lora', Georgia, serif;
-            background-color: rgb(17, 15, 15);
-            color: rgb(165, 165, 165);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column; /* Alinha os elementos verticalmente. Só funciona se tiver o 'display: flex' */
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-            border-bottom: 1px solid #2c2b29;
-            margin-bottom: 30px;
-            position: relative; /* Atua como referencial para que o 'position:relative' possa se alinhar e permite que o elemento '::after' seja posicionado em relação ao header. */
-        }
-
-        header > .titulo {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            color: #c8a96e;
-            margin-bottom: 5px;
-        }
-
-        header > .subtitulo {
-            font-family: 'DM Mono', monospace;
-            font-size: 14px;
-            color: rgb(165, 165, 165);
-            margin-top: 0;
-            text-transform: uppercase;
-        }
-
-        header::after {
-            content: '';
-            position: absolute; /* Se alinha de acordo com o 'postion: absolute' de 'header' e permite que o elemento '::after' seja posicionado em relação ao header.' */
-            bottom: -1px;
-            width: 100px;
-            height: 2px;
-            left: 0; /* Alinha o elemento à esquerda, removendo tota margem */
-        }
-        
-        section {
-            margin: 60px 2px;
-        }
-
-        section > h2 {
-            color: #345c3b;
-            font-family: 'DM Mono', monospace;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin: 20px;
-        }
-
-        section > h2::after {
-            content: '';
-            flex: 1; /* Faz com que o elemento ocupe todo o espaço disponível, empurrando-o para a direita. Só funciona se tiver o 'display: flex' */
-            background-color: #c8a96e;
-            height: 1px;
-        }
-
-
-        .card {
-            background-color: rgba(34, 28, 28, 0.733);
-            border: 1px solid rgb(122, 111, 111);
-            border-radius: 8px;
-            padding: 15px;
-            margin: 20px 20px;
-            line-height: 20px;
-            font-size: 18px;
-            gap: 12px;
-            display: flex;
-            align-items: flex-start; /* Alinha os elementos no topo e também faz com que o background se adapte ao tamanho do conteúdo. Só funciona se tiver o 'display: flex' */
-            transition: border-color 0.3s, background-color 0.3s; /* Adiciona uma transição suave para as mudanças de cor do border e do background */
-        }
-
-        .card:hover {
-            background-color: rgba(61, 51, 51, 0.9);
-        }
-
-        .tags {
-            background-color: rgb(34, 23, 4);
-            font-family: 'DM Mono', monospace;
-            font-size: 12px;
-            border: 1px solid rgb(122, 111, 111);
-            border-radius: 3px;
-            margin-top: 16px;
-            padding: 2px 3px;
-            letter-spacing: 2px;
-            white-space: nowrap; /* Impede que o texto quebre em várias linhas, mantendo a tag inteira em uma única linha. Só funciona se tiver o 'display: flex' */
-            flex-shrink: 0; /* Impede que a tag encolha para se ajustar ao conteúdo, mantendo seu tamanho original, podendo até ultrapassar as dimensões da caixa. Só funciona se tiver o 'display: flex' */
-        }
-
-        .tags-nosemantic {
-            background-color: rgb(82, 22, 22) ;
-        }
-
-        .tags-semantic {
-            background-color: rgb(11, 56, 11);
-        }
-
-        mark {
-            background-color: rgba(146, 138, 20, 0.349);
-            color: white;
-            border-bottom: 1px solid rgb(122, 111, 111); /* Adiciona uma borda inferior (sublinhado) */
-            border-radius: 4px;
-            padding: 0 2px;
-        }
-
-        .mark-green {
-            background-color: rgba(11, 56, 11, 0.521);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: auto;
-        }
-
-        footer p {
-            font-style: italic;
-            font-size: 14px;
-            color: gray;
-            opacity: 0.3;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1 class="titulo">Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
         <p class="subtitulo">Exercício 008 - Formatações em HTML</p>
     </header>
+
     <main>
         <section>
             <h2>Negrito / Destaque</h2>
@@ -227,6 +99,5 @@
     <footer>
         <p>&copy; Gabriel Eduardo</p>
     </footer>
-
 </body>
 </html>

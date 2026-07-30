@@ -6,17 +6,41 @@
     <title>Página 002</title>
     <link rel="shortcut icon" href="favicon-32x32 copy.png" type="image/x-icon">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background-color: rgb(179, 168, 197);
+            background: linear-gradient(to left, blue, rgb(23, 23, 90));
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             color: rgb(0, 0, 0);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 50px;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 90%;
+            background-color: white;
+            padding: 40px;
+            letter-spacing: 2px;
+            line-height: 2em;
+            border-radius: 10px;
         }
 
         p {
-            color: rgb(240, 21, 21);
+            color: rgb(0, 0, 0);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
@@ -25,12 +49,13 @@
         }
 
         a:hover {
-            color: rgb(0, 0, 0);
+            color: rgb(255, 0, 0);
         }
 
         footer {
             text-align: center;
             margin-top: auto;
+            margin-bottom: 20px;
             font-size: 14px;
         }
 
@@ -38,16 +63,21 @@
             font-family: 'Courier New', Courier, monospace;
             font-style: italic;
             font-size: 14px;
-            color: rgb(0, 0, 0);
+            color: rgb(247, 247, 247);
             opacity: 1.2;
         }
     </style>
 </head>
 <body>
-    <h1>Essa é a página 002</h1>
-    <p>Esta é a segunda página do site</p>
-    <p>Se quiser voltar para a página inicial, basta clicar aqui: <a href="index.html" rel="prev">Voltar</a></p>
-    <p>Essa página é um ofereciento do <a href="https://www.cursoemvideo.com/" target="_blank" rel="noffolow">Curso em Vídeo</a></p>
+    <header>
+        <h1>Essa é a página 002</h1>
+    </header>
+    <main>
+        <p>Esta é a segunda página do site</p>
+        <p>Se quiser voltar para a página inicial, basta clicar aqui: <a href="index.html" rel="prev">Voltar</a></p>
+        <p>Essa página é um ofereciento do <a href="https://www.cursoemvideo.com/" target="_blank" rel="noffolow">Curso em Vídeo</a></p>
+    </main>
+
     <footer>
         <p>&copy;Gabriel Eduardo</p>
     </footer>

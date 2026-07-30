@@ -10,6 +10,7 @@
             background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(191, 192, 171));
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: purple;
+            margin: 20px 10px;
             min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport, ou seja, a tela inteira */
             display: flex; /* Permite organizar o posicionameto dos elementos ('main', 'div', 'footer', etc.) */
             flex-direction: column; /* Organiza os elementos verticalmente. Precisa do 'display: flex' */
@@ -20,10 +21,21 @@
             margin-bottom: 80px;
         }
 
+        header > h1 {
+            margin-bottom: 0;
+        }
+
+        header > p {
+            margin-top: 0;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
         main {
             background-image: linear-gradient(to bottom, rgb(255, 253, 133), rgb(234, 238, 203));
-            margin: auto; /* Centraliza o main horizontalmente */
-            max-width: fit-content; /* Faz com a caixa se adapte ao tamanho do conteúdo */
+            margin: 20px auto; /* Centraliza o main horizontalmente */
+            max-width: fit-content; /* Faz com o container se adapte ao tamanho do conteúdo */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.459);
@@ -46,6 +58,7 @@
         <h1>Curso de HTML5 e CSS3 - Curso em Vídeo</h1>
         <p>Exercício 006 - Títulos e subtítulos</p>
     </header>
+
     <main>
         <div>Títulos e subtítulos usando as tags de &lt;h1&gt; a &lt;h6&gt;</div>
         <h1>&lt;h1&gt; - Título principal</h1>
@@ -61,6 +74,7 @@
         <h6>&lt;h6&gt; - Título de subsubsubtítulo</h6>
         <p>Podemos ainda utlizar as tags de &lt;h6&gt; para subtítulos das tags anteriores.</p>
     </main>
+
     <footer>
         <p>&copy; Gabriel Eduardo</p>
     </footer>

@@ -35,7 +35,7 @@
 
         main {
             justify-content: center; /* Alinha o próprio 'main' em relação ao elemento pai ('body') */
-            flex-wrap: nowrap; 
+            flex-wrap: nowrap; /* Impede a quebra de linha */
             display: flex; /* Permite controlar o posicionamento dos elementos filhos */
             text-align: center; /* Alinha os elementos filhos */
         }
@@ -47,7 +47,6 @@
             padding: 20px;
             margin: 20px;
         }
-
 
         .card > h2 {
             font-size: 24px;
@@ -68,28 +67,24 @@
             margin: 0 auto;
         }
 
-        .span-top1 {
+        .span-top1, .span-top2 {
             display: flex;
-            width: fit-content;
+            width: fit-content; /* A largura do container se adapta ao tamanho do elemento */
             padding: 1px 10px;
             text-transform: uppercase;
             font-size: 12px;
-            background-color: rgba(255, 103, 103, 0.315);
-            border: 1px solid rgb(205, 103, 103);
             border-radius: 8px;
             margin-bottom: 20px;
         }
 
+        .span-top1 {
+            background-color: rgba(255, 103, 103, 0.315);
+            border: 1px solid rgb(205, 103, 103);
+        }
+
         .span-top2 {
-            display: flex;
-            width: fit-content;
-            padding: 1px 10px;
-            text-transform: uppercase;
-            font-size: 12px;
             background-color: rgba(106, 243, 79, 0.224);
             border: 1px solid rgb(35, 95, 23);
-            border-radius: 8px;
-            margin-bottom: 20px;
         }
 
         .card-end {
@@ -119,6 +114,7 @@
     </style>
 </head>
 <body>
+
     <header>
         <h1>HTML e CSS - Curso em Vídeo</h1>
         <p>Exercício 12 - Vídeos em HTML5</p>
@@ -151,7 +147,7 @@
                 <div class="card-desc">
                     <span class="span-top2">YouTube</span>
                     <h2>Vídeo do YouTube</h2>
-                    <p>Incorporado via &lt;iframe&gt; com o plauer oficial do YouTube. O conteúdo será carregado a partir do servidor do YouTube.</p>
+                    <p>Incorporado via &lt;iframe&gt; com o player oficial do YouTube. O conteúdo será carregado a partir do servidor do YouTube.</p>
                 </div>
                 <div class="video">
                     <iframe width="550" height="315" src="https://www.youtube.com/embed/X-lXfmWToIY?si=Aatn_owR_CpSJVFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -168,5 +164,6 @@
 <footer>
     <p>&copy; Gabriel Eduardo</p>
 </footer>
+
 </body>
 </html>
